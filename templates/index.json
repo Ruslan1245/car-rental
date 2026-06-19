@@ -206,16 +206,6 @@
         "padding_bottom": 60
       }
     },
-    "car_rental_app_promo": {
-      "type": "car-rental-app-promo",
-      "settings": {
-        "background_color": "#d6e8f7",
-        "heading": "We move with you.",
-        "subheading": "Have all your journeys in the palm of your hand with our app.",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "car_rental_services": {
       "type": "car-rental-services",
       "blocks": {
@@ -226,8 +216,8 @@
             "title": "Smooth landings, every time.",
             "description": "Delayed flight? Chauffeurs track arrivals and adjust accordingly. Plus, you have 1 hour of complimentary wait time just in case.",
             "link_label": "Learn more",
-            "label": "ONE WAY TRANSFERS",
-            "link": "shopify://pages/services"
+            "link": "shopify://pages/services",
+            "label": "ONE WAY TRANSFERS"
           }
         },
         "service_2": {
@@ -237,8 +227,8 @@
             "title": "Seize the day.",
             "description": "Reserve a dedicated chauffeur from 2 to 24 hours. They'll be on standby as long as you need them.",
             "link_label": "Learn more",
-            "label": "BY THE HOUR",
-            "link": "shopify://pages/services"
+            "link": "shopify://pages/services",
+            "label": "BY THE HOUR"
           }
         }
       },
@@ -252,6 +242,58 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "car_rental_app_promo": {
+      "type": "car-rental-app-promo",
+      "settings": {
+        "background_color": "#d6e8f7",
+        "heading": "We move with you.",
+        "subheading": "Have all your journeys in the palm of your hand with our app.",
+        "appstore_link": "",
+        "googleplay_link": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "car_rental_features_kGWb9A": {
+      "type": "car-rental-features",
+      "blocks": {
+        "feature_XR6ee9": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "rates",
+            "title": "Feature title",
+            "description": "Describe this feature in a few words."
+          }
+        },
+        "feature_NMG4de": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "airport",
+            "title": "Feature title",
+            "description": "Describe this feature in a few words."
+          }
+        },
+        "feature_K63QkL": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "clock",
+            "title": "Feature title",
+            "description": "Describe this feature in a few words."
+          }
+        }
+      },
+      "block_order": [
+        "feature_XR6ee9",
+        "feature_NMG4de",
+        "feature_K63QkL"
+      ],
+      "name": "Car Rental Features",
+      "settings": {
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
@@ -259,6 +301,7 @@
     "car_rental_features",
     "car_rental_reviews",
     "car_rental_services",
-    "car_rental_app_promo"
+    "car_rental_app_promo",
+    "car_rental_features_kGWb9A"
   ]
 }
