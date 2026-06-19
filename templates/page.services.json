@@ -1,0 +1,163 @@
+{
+  "sections": {
+    "services_hero": {
+      "type": "hero",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Corporate transportation services</p>",
+            "alignment": "center",
+            "type_preset": "h1",
+            "text_color": "#ffffff",
+            "background": false,
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "text_2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Five-star chauffeurs worldwide for corporations, agencies, and partners.</p>",
+            "alignment": "center",
+            "type_preset": "body",
+            "text_color": "#ffffff",
+            "background": false,
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["text_1", "text_2"],
+      "settings": {
+        "section_height": "large",
+        "toggle_overlay": true,
+        "overlay_color": "#00000050",
+        "overlay_style": "solid",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "content_direction": "column"
+      }
+    },
+    "services_reviews": {
+      "type": "car-rental-reviews",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "This is a must-have service if you need premium transport. Their support is top notch and the drivers are always on time!",
+            "author_name": "Diamond Buyers",
+            "date": "2021-11-12"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "rating": 4,
+            "review_text": "The best chauffeur service around. Can't go wrong with them.",
+            "author_name": "Martin Fletcher",
+            "date": "2020-05-12"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "rating": 4,
+            "review_text": "I have been using it for a year now and more clients keep asking for the service.",
+            "author_name": "Aymee Vasquez",
+            "date": "2019-05-12"
+          }
+        }
+      },
+      "block_order": ["review_1", "review_2", "review_3"],
+      "settings": {
+        "heading": "",
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "services_features": {
+      "type": "car-rental-features",
+      "blocks": {
+        "feat_1": { "type": "feature", "settings": { "icon_type": "rates", "title": "Global reliability", "description": "Count on instant confirmation and high-quality service in over 60 countries." } },
+        "feat_2": { "type": "feature", "settings": { "icon_type": "rates", "title": "Competitive rates", "description": "Access excellent service at distance-based rates that are fair to you and our chauffeurs." } },
+        "feat_3": { "type": "feature", "settings": { "icon_type": "clock", "title": "Unrivaled flexibility", "description": "Change or cancel at no extra charge up until 1 hour before pickup." } },
+        "feat_4": { "type": "feature", "settings": { "icon_type": "clock", "title": "Priority 24/7 support", "description": "Receive multilingual care whenever you need it via chat, phone, or email." } },
+        "feat_5": { "type": "feature", "settings": { "icon_type": "car", "title": "Simplified management", "description": "Reduce accounting hassles with detailed reporting and individual or monthly invoicing." } },
+        "feat_6": { "type": "feature", "settings": { "icon_type": "airport", "title": "Sustainability", "description": "Support your ESG goals with carbon-offset rides, and electric vehicles in many locations." } }
+      },
+      "block_order": ["feat_1", "feat_2", "feat_3", "feat_4", "feat_5", "feat_6"],
+      "settings": {
+        "heading": "How you arrive matters.",
+        "heading_color": "#7a9cbf",
+        "background_color": "#f5f0ea",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "services_tailored": {
+      "type": "cr-tailored",
+      "blocks": {
+        "item_1": { "type": "item", "settings": { "title": "Corporate travel", "description": "Arrange business journeys for your employees, clients, or yourself with ease." } },
+        "item_2": { "type": "item", "settings": { "title": "Travel agencies", "description": "Earn more with a top-tier travel provider, integrated in your GDS." } },
+        "item_3": { "type": "item", "settings": { "title": "Strategic partnerships", "description": "Gift your valuable customers our services via a bespoke business solution." } }
+      },
+      "block_order": ["item_1", "item_2", "item_3"],
+      "settings": {
+        "heading": "Tailored to you",
+        "heading_color": "#7a9cbf",
+        "background_color": "#f5f0ea",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "services_text_image_1": {
+      "type": "cr-text-image",
+      "settings": {
+        "heading": "Airport transfer in global cities",
+        "text": "<p>If you've just stepped off a plane, tired and aching from a long flight, there can be no better stress-reliever than a chauffeur airport transfer direct to your destination. Our transfers are available in hundreds of cities and airports across the world.</p>",
+        "image_position": "right",
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "services_text_image_2": {
+      "type": "cr-text-image",
+      "settings": {
+        "heading": "Get to or from the airport",
+        "text": "<p>A chauffeur service aims to achieve the very highest possible standards for all its passengers. Whether you're stepping out of LAX or need to be dropped off, we'll get you there relaxed, recharged and ready.</p>",
+        "image_position": "left",
+        "background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "services_faq": {
+      "type": "cr-faq",
+      "blocks": {
+        "faq_1": { "type": "item", "settings": { "question": "What does an airport transfer do?", "answer": "An airport transfer is a pre-booked vehicle service that takes you to or from the airport safely and on time." } },
+        "faq_2": { "type": "item", "settings": { "question": "Is it worth booking an airport transfer?", "answer": "Yes — a pre-booked transfer removes the stress of finding transport after a long flight and ensures you arrive on time." } },
+        "faq_3": { "type": "item", "settings": { "question": "What is a paid airport transfer?", "answer": "A paid airport transfer is a ride with a pre-booked professional driver to take customers to and/or from the airport. These airport shuttles are designed to accommodate passengers and their luggage comfortably and safely." } }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3"],
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "services_hero",
+    "services_reviews",
+    "services_features",
+    "services_tailored",
+    "services_text_image_1",
+    "services_text_image_2",
+    "services_faq"
+  ]
+}
