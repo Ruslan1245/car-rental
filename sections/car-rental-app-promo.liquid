@@ -10,14 +10,32 @@
       <div class="cr-app__buttons">
         {% if section.settings.appstore_link != blank %}
           <a class="cr-app__store-btn" href="{{ section.settings.appstore_link }}" target="_blank" rel="noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            App Store
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" width="135" height="40">
+              <rect width="120" height="40" rx="8" fill="#000"/>
+              <path d="M24.77 19.88a5.26 5.26 0 0 1 2.5-4.41 5.39 5.39 0 0 0-4.24-2.3c-1.79-.19-3.52 1.07-4.43 1.07-.93 0-2.33-1.05-3.84-1.02a5.65 5.65 0 0 0-4.76 2.9c-2.06 3.56-.52 8.79 1.45 11.67.99 1.41 2.14 2.99 3.65 2.93 1.48-.06 2.03-.94 3.82-.94 1.77 0 2.28.94 3.83.91 1.59-.03 2.58-1.42 3.54-2.84a11.6 11.6 0 0 0 1.62-3.29 5.08 5.08 0 0 1-3.14-4.68z" fill="#fff"/>
+              <path d="M21.86 11.37a5.18 5.18 0 0 0 1.18-3.71 5.27 5.27 0 0 0-3.41 1.76 4.93 4.93 0 0 0-1.22 3.57 4.36 4.36 0 0 0 3.45-1.62z" fill="#fff"/>
+              <text x="38" y="16" font-family="Arial,sans-serif" font-size="8" fill="#fff" opacity="0.8">Download on the</text>
+              <text x="38" y="29" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff">App Store</text>
+            </svg>
           </a>
         {% endif %}
         {% if section.settings.googleplay_link != blank %}
           <a class="cr-app__store-btn" href="{{ section.settings.googleplay_link }}" target="_blank" rel="noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.12-6.99-2.55-2.56L3.18 23.76zm-1.96-2.09c.06.26.2.49.41.67v-19c-.21.18-.35.4-.41.67-.06.26-.04.53.06.78L1.22 21.67zM22.14 10.2l-2.47-1.43-2.82 2.83 2.82 2.82 2.5-1.44c.71-.41.71-1.36-.03-1.78zM4.17.24L16.3 7.23 13.74 9.8 1.63.37c.34-.1.7-.07.99.1l1.55.9z"/></svg>
-            Google Play
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" width="135" height="40">
+              <rect width="120" height="40" rx="8" fill="#000"/>
+              <path d="M12 8.5l14.5 11.5-14.5 11.5V8.5z" fill="url(#gp1)"/>
+              <path d="M12 8.5l8.5 8.5-8.5 8.5L7 20.5l5-12z" fill="url(#gp2)"/>
+              <path d="M26.5 20l4 2.5-18 10.5 14-13z" fill="url(#gp3)"/>
+              <path d="M26.5 20l4-2.5-18-9.5 14 12z" fill="url(#gp4)"/>
+              <defs>
+                <linearGradient id="gp1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#00C6FF"/><stop offset="100%" stop-color="#00A6FF"/></linearGradient>
+                <linearGradient id="gp2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#00F076"/><stop offset="100%" stop-color="#00C853"/></linearGradient>
+                <linearGradient id="gp3" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FF6D00"/><stop offset="100%" stop-color="#FFAB00"/></linearGradient>
+                <linearGradient id="gp4" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FF1744"/><stop offset="100%" stop-color="#FF4081"/></linearGradient>
+              </defs>
+              <text x="38" y="16" font-family="Arial,sans-serif" font-size="8" fill="#fff" opacity="0.8">GET IT ON</text>
+              <text x="38" y="29" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff">Google Play</text>
+            </svg>
           </a>
         {% endif %}
       </div>
@@ -73,23 +91,14 @@
 }
 
 .cr-app__store-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border: 1.5px solid #111;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #111;
+  display: inline-block;
   text-decoration: none;
-  background: transparent;
-  transition: background 0.2s, color 0.2s;
+  opacity: 1;
+  transition: opacity 0.2s;
 }
 
 .cr-app__store-btn:hover {
-  background: #111;
-  color: #fff;
+  opacity: 0.85;
 }
 
 .cr-app__screenshot {
