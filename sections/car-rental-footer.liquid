@@ -54,11 +54,13 @@
     </div>
 
     <div class="cr-footer__bottom">
-      <span class="cr-footer__copy">{{ section.settings.copyright }}</span>
-      <div class="cr-footer__legal">
-        {% if section.settings.terms_link != blank %}<a href="{{ section.settings.terms_link }}">Terms</a>{% endif %}
-        {% if section.settings.privacy_link != blank %}<a href="{{ section.settings.privacy_link }}">Privacy policy</a>{% endif %}
-        {% if section.settings.legal_link != blank %}<a href="{{ section.settings.legal_link }}">Legal notice</a>{% endif %}
+      <div class="cr-footer__bottom-top">
+        <span class="cr-footer__copy">{{ section.settings.copyright }}</span>
+        <div class="cr-footer__legal">
+          {% if section.settings.terms_link != blank %}<a href="{{ section.settings.terms_link }}">Terms</a>{% endif %}
+          {% if section.settings.privacy_link != blank %}<a href="{{ section.settings.privacy_link }}">Privacy policy</a>{% endif %}
+          {% if section.settings.legal_link != blank %}<a href="{{ section.settings.legal_link }}">Legal notice</a>{% endif %}
+        </div>
       </div>
       <div class="cr-footer__social">
         {% if section.settings.social_linkedin != blank %}
@@ -173,12 +175,18 @@
 
 .cr-footer__bottom {
   display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid #e0d9d0;
+}
+
+.cr-footer__bottom-top {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 16px;
-  padding-top: 24px;
-  border-top: 1px solid #e0d9d0;
+  gap: 12px;
 }
 
 .cr-footer__copy {
