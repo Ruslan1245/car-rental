@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "services_hero": {
@@ -7,36 +16,87 @@
           "type": "text",
           "settings": {
             "text": "<p>Corporate transportation services</p>",
+            "width": "fit-content",
+            "max_width": "normal",
             "alignment": "center",
             "type_preset": "h1",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
             "text_color": "#ffffff",
             "background": false,
-            "wrap": "pretty"
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {}
         },
         "text_2": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Five-star chauffeurs worldwide for corporations, agencies, and partners.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
             "alignment": "center",
             "type_preset": "body",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
             "text_color": "#ffffff",
             "background": false,
-            "wrap": "pretty"
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {}
         }
       },
-      "block_order": ["text_1", "text_2"],
+      "block_order": [
+        "text_1",
+        "text_2"
+      ],
       "settings": {
-        "section_height": "large",
-        "toggle_overlay": true,
-        "overlay_color": "#00000050",
-        "overlay_style": "solid",
+        "media_type_1": "image",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
-        "content_direction": "column"
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "background_color": "",
+        "toggle_overlay": true,
+        "overlay_color": "#0000004f",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 0,
+        "padding-block-end": 0
       }
     },
     "services_reviews": {
@@ -70,7 +130,11 @@
           }
         }
       },
-      "block_order": ["review_1", "review_2", "review_3"],
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
       "settings": {
         "heading": "",
         "background_color": "#ffffff",
@@ -81,14 +145,63 @@
     "services_features": {
       "type": "car-rental-features",
       "blocks": {
-        "feat_1": { "type": "feature", "settings": { "icon_type": "rates", "title": "Global reliability", "description": "Count on instant confirmation and high-quality service in over 60 countries." } },
-        "feat_2": { "type": "feature", "settings": { "icon_type": "rates", "title": "Competitive rates", "description": "Access excellent service at distance-based rates that are fair to you and our chauffeurs." } },
-        "feat_3": { "type": "feature", "settings": { "icon_type": "clock", "title": "Unrivaled flexibility", "description": "Change or cancel at no extra charge up until 1 hour before pickup." } },
-        "feat_4": { "type": "feature", "settings": { "icon_type": "clock", "title": "Priority 24/7 support", "description": "Receive multilingual care whenever you need it via chat, phone, or email." } },
-        "feat_5": { "type": "feature", "settings": { "icon_type": "car", "title": "Simplified management", "description": "Reduce accounting hassles with detailed reporting and individual or monthly invoicing." } },
-        "feat_6": { "type": "feature", "settings": { "icon_type": "airport", "title": "Sustainability", "description": "Support your ESG goals with carbon-offset rides, and electric vehicles in many locations." } }
+        "feat_1": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "rates",
+            "title": "Global reliability",
+            "description": "Count on instant confirmation and high-quality service in over 60 countries."
+          }
+        },
+        "feat_2": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "rates",
+            "title": "Competitive rates",
+            "description": "Access excellent service at distance-based rates that are fair to you and our chauffeurs."
+          }
+        },
+        "feat_3": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "clock",
+            "title": "Unrivaled flexibility",
+            "description": "Change or cancel at no extra charge up until 1 hour before pickup."
+          }
+        },
+        "feat_4": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "clock",
+            "title": "Priority 24/7 support",
+            "description": "Receive multilingual care whenever you need it via chat, phone, or email."
+          }
+        },
+        "feat_5": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "car",
+            "title": "Simplified management",
+            "description": "Reduce accounting hassles with detailed reporting and individual or monthly invoicing."
+          }
+        },
+        "feat_6": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "airport",
+            "title": "Sustainability",
+            "description": "Support your ESG goals with carbon-offset rides, and electric vehicles in many locations."
+          }
+        }
       },
-      "block_order": ["feat_1", "feat_2", "feat_3", "feat_4", "feat_5", "feat_6"],
+      "block_order": [
+        "feat_1",
+        "feat_2",
+        "feat_3",
+        "feat_4",
+        "feat_5",
+        "feat_6"
+      ],
       "settings": {
         "heading": "How you arrive matters.",
         "heading_color": "#7a9cbf",
@@ -100,11 +213,33 @@
     "services_tailored": {
       "type": "cr-tailored",
       "blocks": {
-        "item_1": { "type": "item", "settings": { "title": "Corporate travel", "description": "Arrange business journeys for your employees, clients, or yourself with ease." } },
-        "item_2": { "type": "item", "settings": { "title": "Travel agencies", "description": "Earn more with a top-tier travel provider, integrated in your GDS." } },
-        "item_3": { "type": "item", "settings": { "title": "Strategic partnerships", "description": "Gift your valuable customers our services via a bespoke business solution." } }
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "title": "Corporate travel",
+            "description": "Arrange business journeys for your employees, clients, or yourself with ease."
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "title": "Travel agencies",
+            "description": "Earn more with a top-tier travel provider, integrated in your GDS."
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "title": "Strategic partnerships",
+            "description": "Gift your valuable customers our services via a bespoke business solution."
+          }
+        }
       },
-      "block_order": ["item_1", "item_2", "item_3"],
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3"
+      ],
       "settings": {
         "heading": "Tailored to you",
         "heading_color": "#7a9cbf",
@@ -118,6 +253,8 @@
       "settings": {
         "heading": "Airport transfer in global cities",
         "text": "<p>If you've just stepped off a plane, tired and aching from a long flight, there can be no better stress-reliever than a chauffeur airport transfer direct to your destination. Our transfers are available in hundreds of cities and airports across the world.</p>",
+        "button_label": "",
+        "button_link": "",
         "image_position": "right",
         "background_color": "#ffffff",
         "padding_top": 60,
@@ -129,6 +266,8 @@
       "settings": {
         "heading": "Get to or from the airport",
         "text": "<p>A chauffeur service aims to achieve the very highest possible standards for all its passengers. Whether you're stepping out of LAX or need to be dropped off, we'll get you there relaxed, recharged and ready.</p>",
+        "button_label": "",
+        "button_link": "",
         "image_position": "left",
         "background_color": "#ffffff",
         "padding_top": 0,
@@ -138,11 +277,33 @@
     "services_faq": {
       "type": "cr-faq",
       "blocks": {
-        "faq_1": { "type": "item", "settings": { "question": "What does an airport transfer do?", "answer": "An airport transfer is a pre-booked vehicle service that takes you to or from the airport safely and on time." } },
-        "faq_2": { "type": "item", "settings": { "question": "Is it worth booking an airport transfer?", "answer": "Yes — a pre-booked transfer removes the stress of finding transport after a long flight and ensures you arrive on time." } },
-        "faq_3": { "type": "item", "settings": { "question": "What is a paid airport transfer?", "answer": "A paid airport transfer is a ride with a pre-booked professional driver to take customers to and/or from the airport. These airport shuttles are designed to accommodate passengers and their luggage comfortably and safely." } }
+        "faq_1": {
+          "type": "item",
+          "settings": {
+            "question": "What does an airport transfer do?",
+            "answer": "An airport transfer is a pre-booked vehicle service that takes you to or from the airport safely and on time."
+          }
+        },
+        "faq_2": {
+          "type": "item",
+          "settings": {
+            "question": "Is it worth booking an airport transfer?",
+            "answer": "Yes — a pre-booked transfer removes the stress of finding transport after a long flight and ensures you arrive on time."
+          }
+        },
+        "faq_3": {
+          "type": "item",
+          "settings": {
+            "question": "What is a paid airport transfer?",
+            "answer": "A paid airport transfer is a ride with a pre-booked professional driver to take customers to and/or from the airport. These airport shuttles are designed to accommodate passengers and their luggage comfortably and safely."
+          }
+        }
       },
-      "block_order": ["faq_1", "faq_2", "faq_3"],
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
       "settings": {
         "heading": "Frequently Asked Questions",
         "background_color": "#ffffff",
