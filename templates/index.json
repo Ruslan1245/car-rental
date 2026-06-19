@@ -1,0 +1,264 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_jVaWmY": {
+      "type": "hero",
+      "blocks": {
+        "text_YLPk4p": {
+          "type": "text",
+          "name": "t:names.heading",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Premium chauffeur service, on your terms</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "{{ settings.color_palette.background }}",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_H9gpTf": {
+          "type": "button",
+          "name": "t:names.button",
+          "disabled": true,
+          "settings": {
+            "label": "Book Now",
+            "link": "shopify://pages/book-now",
+            "open_in_new_tab": false,
+            "style_class": "button-custom",
+            "custom_button_background": "rgba(0,0,0,0)",
+            "custom_button_text": "{{ settings.color_palette.background }}",
+            "custom_button_border": "{{ settings.color_palette.background }}",
+            "link_text_color": "",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_YLPk4p",
+        "button_H9gpTf"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/car.jpg",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "flex-end",
+        "align_baseline": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "flex-end",
+        "gap": 24,
+        "section_width": "page-width",
+        "section_height": "full-screen",
+        "section_height_custom": 50,
+        "background_color": "rgba(0,0,0,0)",
+        "toggle_overlay": true,
+        "overlay_color": "#1212120a",
+        "overlay_style": "solid",
+        "gradient_direction": "to bottom",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 100,
+        "padding-block-end": 72
+      }
+    },
+    "car_rental_features": {
+      "type": "car-rental-features",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "rates",
+            "title": "Competitive rates",
+            "description": "Access premium service at distance-based prices that are fair to you and our chauffeurs."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "airport",
+            "title": "Seamless airport travel",
+            "description": "Relax with 1 hour of complimentary wait time and flight tracking."
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "clock",
+            "title": "Travel on your terms",
+            "description": "Stay flexible and in charge of your schedule. It's quick and easy for you to cancel or make changes to any ride."
+          }
+        },
+        "feature_4": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "rates",
+            "title": "Competitive rates",
+            "description": "Access premium service at distance-based prices that are fair to you and our chauffeurs."
+          }
+        },
+        "feature_5": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "airport",
+            "title": "Seamless airport travel",
+            "description": "Relax with 1 hour of complimentary wait time and flight tracking."
+          }
+        },
+        "feature_6": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "clock",
+            "title": "Travel on your terms",
+            "description": "Stay flexible and in charge of your schedule. It's quick and easy for you to cancel or make changes to any ride."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3",
+        "feature_4",
+        "feature_5",
+        "feature_6"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "car_rental_reviews": {
+      "type": "car-rental-reviews",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "This is a must-have plugin if you own a small/medium business that replies on reviews to add a layer of trust to your website. I had an issue and their support is top notch!",
+            "author_name": "Diamond Buyers",
+            "date": "2021-11-12"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "rating": 4,
+            "review_text": "I apps make that local review software around, their support is top notch also! Can't go wrong with them.",
+            "author_name": "Martin Fletcher",
+            "date": "2020-05-12"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "rating": 4,
+            "review_text": "This air social media public reviews all in one solution plug in rocks. I have been using it for a year now and more clients keep asking for the reviews.",
+            "author_name": "Aymee Vasquez",
+            "date": "2019-05-12"
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
+      "settings": {
+        "heading": "What our customers say",
+        "background_color": "#f9f9f9",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "car_rental_app_promo": {
+      "type": "car-rental-app-promo",
+      "settings": {
+        "background_color": "#d6e8f7",
+        "heading": "We move with you.",
+        "subheading": "Have all your journeys in the palm of your hand with our app.",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "car_rental_services": {
+      "type": "car-rental-services",
+      "blocks": {
+        "service_1": {
+          "type": "service",
+          "settings": {
+            "category": "Airport transfers",
+            "title": "Smooth landings, every time.",
+            "description": "Delayed flight? Chauffeurs track arrivals and adjust accordingly. Plus, you have 1 hour of complimentary wait time just in case.",
+            "link_label": "Learn more",
+            "label": "ONE WAY TRANSFERS",
+            "link": "shopify://pages/services"
+          }
+        },
+        "service_2": {
+          "type": "service",
+          "settings": {
+            "category": "Hourly and full day hire",
+            "title": "Seize the day.",
+            "description": "Reserve a dedicated chauffeur from 2 to 24 hours. They'll be on standby as long as you need them.",
+            "link_label": "Learn more",
+            "label": "BY THE HOUR",
+            "link": "shopify://pages/services"
+          }
+        }
+      },
+      "block_order": [
+        "service_1",
+        "service_2"
+      ],
+      "settings": {
+        "heading": "Our services",
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "hero_jVaWmY",
+    "car_rental_features",
+    "car_rental_reviews",
+    "car_rental_app_promo",
+    "car_rental_services"
+  ]
+}

@@ -1,0 +1,183 @@
+<div class="cr-app" style="background: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;">
+  <div class="cr-app__inner">
+    <div class="cr-app__content">
+      {% if section.settings.heading != blank %}
+        <h2 class="cr-app__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subheading != blank %}
+        <p class="cr-app__subheading">{{ section.settings.subheading }}</p>
+      {% endif %}
+      <div class="cr-app__buttons">
+        {% if section.settings.appstore_link != blank %}
+          <a class="cr-app__store-btn" href="{{ section.settings.appstore_link }}" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            App Store
+          </a>
+        {% endif %}
+        {% if section.settings.googleplay_link != blank %}
+          <a class="cr-app__store-btn" href="{{ section.settings.googleplay_link }}" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.12-6.99-2.55-2.56L3.18 23.76zm-1.96-2.09c.06.26.2.49.41.67v-19c-.21.18-.35.4-.41.67-.06.26-.04.53.06.78L1.22 21.67zM22.14 10.2l-2.47-1.43-2.82 2.83 2.82 2.82 2.5-1.44c.71-.41.71-1.36-.03-1.78zM4.17.24L16.3 7.23 13.74 9.8 1.63.37c.34-.1.7-.07.99.1l1.55.9z"/></svg>
+            Google Play
+          </a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="cr-app__media">
+      {% if section.settings.screenshot != blank %}
+        {{ section.settings.screenshot | image_url: width: 700 | image_tag: width: 700, loading: 'lazy', class: 'cr-app__screenshot' }}
+      {% else %}
+        <div class="cr-app__screenshot-placeholder"></div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+.cr-app__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 5vw, 80px);
+}
+
+.cr-app__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cr-app__heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+  color: #111;
+}
+
+.cr-app__subheading {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 380px;
+}
+
+.cr-app__buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cr-app__store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1.5px solid #111;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cr-app__store-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+.cr-app__screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.cr-app__screenshot-placeholder {
+  width: 100%;
+  height: 300px;
+  background: rgba(0,0,0,0.08);
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .cr-app__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .cr-app__media {
+    order: -1;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "App Promo",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#d6e8f7"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "We move with you."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Have all your journeys in the palm of your hand with our app."
+    },
+    {
+      "type": "url",
+      "id": "appstore_link",
+      "label": "App Store link"
+    },
+    {
+      "type": "url",
+      "id": "googleplay_link",
+      "label": "Google Play link"
+    },
+    {
+      "type": "image_picker",
+      "id": "screenshot",
+      "label": "App screenshot image"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "App Promo"
+    }
+  ]
+}
+{% endschema %}

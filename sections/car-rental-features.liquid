@@ -1,0 +1,153 @@
+<div class="cr-features" style="background: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;">
+  <div class="cr-features__grid page-width-normal">
+    {% for block in section.blocks %}
+      {% if block.type == 'feature' %}
+        <div class="cr-features__item" {{ block.shopify_attributes }}>
+          <div class="cr-features__icon">
+            {% case block.settings.icon_type %}
+              {% when 'rates' %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <rect x="6" y="10" width="36" height="28" rx="3" stroke="#4a7cf5" stroke-width="2.5" fill="none"/>
+                  <line x1="6" y1="18" x2="42" y2="18" stroke="#4a7cf5" stroke-width="2.5"/>
+                  <line x1="14" y1="26" x2="22" y2="26" stroke="#4a7cf5" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="14" y1="32" x2="20" y2="32" stroke="#4a7cf5" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              {% when 'airport' %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2-7h-4l-2 2h-3l2-4-2-4h3l2 2h4l-2-7h3z"/>
+                </svg>
+              {% when 'clock' %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <circle cx="24" cy="24" r="16" stroke="#4a7cf5" stroke-width="2.5"/>
+                  <polyline points="24,14 24,24 30,28" stroke="#4a7cf5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {% when 'car' %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M8 28 L12 16 C12.8 14 14.5 13 16.5 13 L31.5 13 C33.5 13 35.2 14 36 16 L40 28" stroke="#4a7cf5" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                  <rect x="6" y="28" width="36" height="10" rx="2" stroke="#4a7cf5" stroke-width="2.5" fill="none"/>
+                  <circle cx="14" cy="38" r="4" stroke="#4a7cf5" stroke-width="2.5" fill="white"/>
+                  <circle cx="34" cy="38" r="4" stroke="#4a7cf5" stroke-width="2.5" fill="white"/>
+                </svg>
+            {% endcase %}
+          </div>
+          <h3 class="cr-features__title">{{ block.settings.title }}</h3>
+          <p class="cr-features__description">{{ block.settings.description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% stylesheet %}
+.cr-features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 5vw, 80px);
+}
+
+.cr-features__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cr-features__icon {
+  width: 48px;
+  height: 48px;
+}
+
+.cr-features__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111;
+}
+
+.cr-features__description {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .cr-features__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Car Rental Features",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature item",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon_type",
+          "label": "Icon",
+          "options": [
+            { "value": "rates", "label": "Price / Rates" },
+            { "value": "airport", "label": "Airport / Airplane" },
+            { "value": "clock", "label": "Clock / Time" },
+            { "value": "car", "label": "Car" }
+          ],
+          "default": "rates"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Describe this feature in a few words."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Car Rental Features"
+    }
+  ]
+}
+{% endschema %}

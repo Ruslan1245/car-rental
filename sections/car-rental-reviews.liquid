@@ -1,0 +1,286 @@
+<div class="cr-reviews" style="background: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;">
+  {% if section.settings.heading != blank %}
+    <div class="cr-reviews__heading-wrap">
+      <h2 class="cr-reviews__heading">{{ section.settings.heading }}</h2>
+    </div>
+  {% endif %}
+  <div class="cr-reviews__track-wrap">
+    <div class="cr-reviews__track">
+      {% for block in section.blocks %}
+        {% if block.type == 'review' %}
+          <div class="cr-reviews__card" {{ block.shopify_attributes }}>
+            <div class="cr-reviews__stars">
+              {% for i in (1..5) %}
+                {% if i <= block.settings.rating %}
+                  <span class="cr-reviews__star cr-reviews__star--filled">★</span>
+                {% else %}
+                  <span class="cr-reviews__star">★</span>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <p class="cr-reviews__text">
+              <span class="cr-reviews__quote">&ldquo;</span>{{ block.settings.review_text }}<span class="cr-reviews__quote">&rdquo;</span>
+            </p>
+            <div class="cr-reviews__author">
+              <div class="cr-reviews__avatar">
+                {% if block.settings.avatar != blank %}
+                  {{ block.settings.avatar | image_url: width: 48 | image_tag: width: 48, height: 48, loading: 'lazy' }}
+                {% else %}
+                  <span>{{ block.settings.author_name | slice: 0 | upcase }}</span>
+                {% endif %}
+              </div>
+              <div class="cr-reviews__author-info">
+                <span class="cr-reviews__author-name">{{ block.settings.author_name }}</span>
+                {% if block.settings.date != blank %}
+                  <span class="cr-reviews__date">{{ block.settings.date }}</span>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+.cr-reviews__heading-wrap {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 5vw, 80px);
+  margin-bottom: 40px;
+}
+
+.cr-reviews__heading {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111;
+}
+
+.cr-reviews__track-wrap {
+  max-width: 1200px;
+  margin-inline: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cr-reviews__track-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.cr-reviews__track {
+  display: flex;
+  gap: 24px;
+  scroll-snap-type: x mandatory;
+  padding-inline: clamp(16px, 5vw, 80px);
+  padding-bottom: 8px;
+  width: max-content;
+}
+
+.cr-reviews__card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  background: #fff;
+  min-width: 320px;
+  max-width: 360px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.cr-reviews__stars {
+  display: flex;
+  gap: 2px;
+}
+
+.cr-reviews__star {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.cr-reviews__star--filled {
+  color: #f5a623;
+}
+
+.cr-reviews__text {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+.cr-reviews__quote {
+  color: #4a7cf5;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.cr-reviews__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.cr-reviews__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #4a7cf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cr-reviews__avatar span {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cr-reviews__avatar img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.cr-reviews__author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cr-reviews__author-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.cr-reviews__date {
+  font-size: 0.75rem;
+  color: #999;
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Car Rental Reviews",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What our customers say"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review text",
+          "default": "Excellent service! The driver was professional and on time."
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Author photo"
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "label": "Author name",
+          "default": "John Smith"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date",
+          "default": "2024-01-15"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Car Rental Reviews",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "This is a must-have service if you need premium transport. Their support is top notch and the drivers are always on time!",
+            "author_name": "Diamond Buyers",
+            "date": "2021-11-12"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "rating": 4,
+            "review_text": "The best chauffeur service around. Their support is top notch also! Can't go wrong with them.",
+            "author_name": "Martin Fletcher",
+            "date": "2020-05-12"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "rating": 4,
+            "review_text": "I have been using it for a year now and more clients keep asking for the service. Absolutely recommend!",
+            "author_name": "Aymee Vasquez",
+            "date": "2019-05-12"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
