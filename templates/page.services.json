@@ -39,7 +39,6 @@
         },
         "text_2": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "<p>Five-star chauffeurs worldwide for corporations, agencies, and partners.</p>",
             "width": "fit-content",
@@ -70,6 +69,7 @@
       ],
       "settings": {
         "media_type_1": "image",
+        "image_1": "shopify://shop_images/service.png",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
