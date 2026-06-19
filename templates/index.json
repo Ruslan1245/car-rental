@@ -212,6 +212,7 @@
         "service_1": {
           "type": "service",
           "settings": {
+            "image": "shopify://shop_images/car_a.jpg",
             "category": "Airport transfers",
             "title": "Smooth landings, every time.",
             "description": "Delayed flight? Chauffeurs track arrivals and adjust accordingly. Plus, you have 1 hour of complimentary wait time just in case.",
@@ -223,6 +224,7 @@
         "service_2": {
           "type": "service",
           "settings": {
+            "image": "shopify://shop_images/car_m.jpg",
             "category": "Hourly and full day hire",
             "title": "Seize the day.",
             "description": "Reserve a dedicated chauffeur from 2 to 24 hours. They'll be on standby as long as you need them.",
@@ -251,6 +253,7 @@
         "subheading": "Have all your journeys in the palm of your hand with our app.",
         "appstore_link": "",
         "googleplay_link": "",
+        "screenshot": "shopify://shop_images/flavien-MaraDXSaTho-unsplash_e94b91c2-955b-4ddd-b221-ccf0855c0462.jpg",
         "padding_top": 60,
         "padding_bottom": 60
       }
