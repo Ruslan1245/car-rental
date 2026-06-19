@@ -115,5 +115,10 @@
         "foreground": "#000000"
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".menu-list__link-title {font-size: 18px !important;}"
+    ]
   }
 }
