@@ -248,7 +248,7 @@
         "vehicle_6": {
           "type": "vehicle",
           "settings": {
-            "image_1": "shopify://shop_images/sprinter.jpg",
+            "image_1": "shopify://shop_images/sprinter_26df931f-72e8-4443-bbd3-221aea9444fd.jpg",
             "title": "Sprinter Van",
             "models": "Mercedes Sprinter, or similar",
             "feature_1": "Fits up to 12 people",
@@ -280,7 +280,7 @@
         "text": "<p>When you land after a long-haul flight, the last thing you want is to stand in a taxi queue. With our airport transfer service, a professional chauffeur is waiting at arrivals — holding a name board, ready to take your bags.</p><p>We monitor your flight in real time, so if your plane is early or late, your driver knows before you do. You also get 60 minutes of complimentary wait time included on every airport pickup, so there's no rush through customs.</p>",
         "button_label": "Book a transfer",
         "button_link": "",
-        "image": "shopify://shop_images/transfer_page.jpg",
+        "image": "shopify://shop_images/transfer_page_9a5a9f0d-2b2b-489a-ac6d-706ab2e30eef.jpg",
         "image_position": "right",
         "background_color": "#ffffff",
         "padding_top": 64,
