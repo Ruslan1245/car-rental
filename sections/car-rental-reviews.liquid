@@ -4,8 +4,20 @@
       <h2 class="cr-reviews__heading">{{ section.settings.heading }}</h2>
     </div>
   {% endif %}
+  <div class="cr-reviews__nav">
+    <button class="cr-reviews__arrow cr-reviews__arrow--prev" aria-label="Previous">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
+    <button class="cr-reviews__arrow cr-reviews__arrow--next" aria-label="Next">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </button>
+  </div>
   <div class="cr-reviews__track-wrap">
-    <div class="cr-reviews__track">
+    <div class="cr-reviews__track" id="cr-reviews-track-{{ section.id }}">
       {% for block in section.blocks %}
         {% if block.type == 'review' %}
           <div class="cr-reviews__card" {{ block.shopify_attributes }}>
@@ -45,6 +57,31 @@
     </div>
   </div>
 </div>
+
+<script>
+  (function() {
+    var section = document.querySelector('.cr-reviews[data-section-id="{{ section.id }}"]') || document.querySelector('.cr-reviews');
+    var track = document.getElementById('cr-reviews-track-{{ section.id }}');
+    var prevBtn = section && section.querySelector('.cr-reviews__arrow--prev');
+    var nextBtn = section && section.querySelector('.cr-reviews__arrow--next');
+
+    if (!track || !prevBtn || !nextBtn) return;
+
+    function getCardWidth() {
+      var card = track.querySelector('.cr-reviews__card');
+      if (!card) return 320;
+      return card.offsetWidth + 24;
+    }
+
+    prevBtn.addEventListener('click', function() {
+      track.parentElement.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', function() {
+      track.parentElement.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+    });
+  })();
+</script>
 
 <script>
   document.querySelectorAll('.cr-reviews__card').forEach(function(card) {
@@ -90,6 +127,37 @@
   font-weight: 600;
   margin: 0;
   color: #111;
+}
+
+.cr-reviews__nav {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 5vw, 80px);
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.cr-reviews__arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #333;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.cr-reviews__arrow:hover {
+  background: #0f63bd;
+  border-color: #0f63bd;
+  color: #fff;
 }
 
 .cr-reviews__track-wrap {
