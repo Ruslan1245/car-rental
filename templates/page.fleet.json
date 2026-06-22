@@ -1,0 +1,151 @@
+{
+  "sections": {
+    "fleet_hero": {
+      "type": "cr-page-hero",
+      "settings": {
+        "eyebrow": "Premium vehicles",
+        "heading": "Our Fleet",
+        "subheading": "From executive saloons to spacious vans — every vehicle is late-model, professionally maintained, and driven by a licensed chauffeur.",
+        "button_label": "Book a ride",
+        "button_link": "shopify://pages/book-now"
+      }
+    },
+    "fleet_vehicles": {
+      "type": "cr-vehicle-cards",
+      "blocks": {
+        "vehicle_1": {
+          "type": "vehicle",
+          "settings": {
+            "image_1": "shopify://shop_images/car_bently.jpg",
+            "image_2": "shopify://shop_images/car_merc.jpg",
+            "title": "Business Class",
+            "models": "Mercedes E-Class, BMW 5 Series, Audi A6, Cadillac XTS, or similar",
+            "feature_1": "Fits up to 3 people",
+            "feature_2": "Fits 2 carry-on bags, or 2 standard check-in, or 1 extra large check-in bag",
+            "feature_3": "Available in most of our business districts"
+          }
+        },
+        "vehicle_2": {
+          "type": "vehicle",
+          "settings": {
+            "image_1": "shopify://shop_images/car_merc_2.jpg",
+            "image_2": "shopify://shop_images/car_sport.jpg",
+            "title": "First Class",
+            "models": "Mercedes S-Class, BMW 7 Series, Audi A8, or similar",
+            "feature_1": "Fits up to 3 people",
+            "feature_2": "Fits 2 carry-on bags, or 2 standard check-in, or 1 extra large check-in bag",
+            "feature_3": "Available in most of our business districts"
+          }
+        },
+        "vehicle_3": {
+          "type": "vehicle",
+          "settings": {
+            "image_1": "shopify://shop_images/car_1classXL.jpg",
+            "image_2": "shopify://shop_images/car_escalade.jpg",
+            "title": "Business Van / SUV",
+            "models": "Mercedes V-Class, Chevy Suburban, Cadillac Escalade, GMC Yukon Denali, or similar",
+            "feature_1": "Fits up to 5 people",
+            "feature_2": "Fits 12 carry-on bags or 8 standard check-in or 6 extra large check-in bags",
+            "feature_3": "Best for larger parties, lots of luggage, or families"
+          }
+        },
+        "vehicle_4": {
+          "type": "vehicle",
+          "settings": {
+            "image_1": "shopify://shop_images/car_tesla_627014fa-4afd-4fb9-9523-1cf46168266d.jpg",
+            "image_2": "shopify://shop_images/car_tesla_2.jpg",
+            "title": "Electric Class",
+            "models": "Tesla Model S, Mercedes EQS, BMW iX, or similar",
+            "feature_1": "Fits up to 3 people",
+            "feature_2": "Zero-emission ride with premium comfort",
+            "feature_3": "Available in selected cities"
+          }
+        },
+        "vehicle_5": {
+          "type": "vehicle",
+          "settings": {
+            "image_1": "shopify://shop_images/car_bmw_ff46edf6-689c-4231-aa97-2141ec9a0deb.jpg",
+            "image_2": "shopify://shop_images/car_merc.jpg",
+            "title": "First Class XL",
+            "models": "Mercedes GLS, BMW X7, Audi Q7, or similar",
+            "feature_1": "Fits up to 4 people",
+            "feature_2": "Fits 4 carry-on bags or 4 standard check-in bags",
+            "feature_3": "Ideal for families and executive travel"
+          }
+        },
+        "vehicle_6": {
+          "type": "vehicle",
+          "settings": {
+            "image_1": "shopify://shop_images/sprinter_6be46698-cfb0-44d8-8844-d93e71970f6e.jpg",
+            "title": "Sprinter Van",
+            "models": "Mercedes Sprinter, or similar",
+            "feature_1": "Fits up to 12 people",
+            "feature_2": "Large luggage capacity for groups",
+            "feature_3": "Perfect for group transfers and events"
+          }
+        }
+      },
+      "block_order": [
+        "vehicle_1",
+        "vehicle_2",
+        "vehicle_3",
+        "vehicle_4",
+        "vehicle_5",
+        "vehicle_6"
+      ],
+      "settings": {
+        "heading": "Choose your vehicle class",
+        "fleet_url": "/pages/book-now",
+        "background_color": "#ffffff",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "fleet_features": {
+      "type": "car-rental-features",
+      "blocks": {
+        "feat_1": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "car",
+            "title": "Late-model vehicles only",
+            "description": "Every vehicle in our fleet is no more than 3 years old, fully insured, and serviced to manufacturer standards."
+          }
+        },
+        "feat_2": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "rates",
+            "title": "Transparent pricing",
+            "description": "No hidden fees. The price you see at booking is the price you pay — distance-based and always inclusive of the driver."
+          }
+        },
+        "feat_3": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "clock",
+            "title": "Available 24 / 7",
+            "description": "Our fleet operates around the clock, every day of the year — early morning departures and late night arrivals included."
+          }
+        }
+      },
+      "block_order": [
+        "feat_1",
+        "feat_2",
+        "feat_3"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_color": "#7a9cbf",
+        "background_color": "#f9f9f9",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "fleet_hero",
+    "fleet_vehicles",
+    "fleet_features"
+  ]
+}

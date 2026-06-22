@@ -1,0 +1,162 @@
+<section class="cr-ph">
+  <div class="cr-ph__bg">
+    {% if section.settings.image != blank %}
+      {{ section.settings.image | image_url: width: 1600 | image_tag: width: 1600, loading: 'eager', class: 'cr-ph__bg-image' }}
+    {% else %}
+      <div class="cr-ph__bg-placeholder"></div>
+    {% endif %}
+    <div class="cr-ph__overlay"></div>
+  </div>
+
+  <div class="cr-ph__inner">
+    {% if section.settings.eyebrow != blank %}
+      <span class="cr-ph__eyebrow">{{ section.settings.eyebrow }}</span>
+    {% endif %}
+    {% if section.settings.heading != blank %}
+      <h1 class="cr-ph__heading">{{ section.settings.heading }}</h1>
+    {% endif %}
+    {% if section.settings.subheading != blank %}
+      <p class="cr-ph__subheading">{{ section.settings.subheading }}</p>
+    {% endif %}
+    {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+      <a class="cr-ph__button" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+    {% endif %}
+  </div>
+</section>
+
+{% stylesheet %}
+.cr-ph {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-block: clamp(64px, 10vw, 120px);
+  text-align: center;
+}
+
+.cr-ph__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.cr-ph__bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cr-ph__bg-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a3a5c 0%, #0f2240 100%);
+}
+
+.cr-ph__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.52);
+}
+
+.cr-ph__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 5vw, 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.cr-ph__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+
+.cr-ph__heading {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.35);
+}
+
+.cr-ph__subheading {
+  font-size: clamp(0.9375rem, 2vw, 1.125rem);
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+.cr-ph__button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 14px 36px;
+  background: #0f63bd;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.cr-ph__button:hover {
+  background: #0a4f99;
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Page Hero",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow (small text above heading)"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Fleet"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page Hero"
+    }
+  ]
+}
+{% endschema %}
