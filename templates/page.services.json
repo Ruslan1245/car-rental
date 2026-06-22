@@ -90,7 +90,7 @@
         "section_height_custom": 50,
         "background_color": "",
         "toggle_overlay": true,
-        "overlay_color": "#0000002E",
+        "overlay_color": "#0000002e",
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "blurred_reflection": false,
@@ -226,6 +226,7 @@
         "item_1": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/service.jpg",
             "title": "Corporate travel",
             "description": "Arrange business journeys for your employees, clients, or yourself with ease."
           }
@@ -233,6 +234,7 @@
         "item_2": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/service_airport.jpg",
             "title": "Travel agencies",
             "description": "Earn more with a top-tier travel provider, integrated in your GDS."
           }
@@ -240,6 +242,7 @@
         "item_3": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/service_meet.jpg",
             "title": "Strategic partnerships",
             "description": "Gift your valuable customers our services via a bespoke business solution."
           }
