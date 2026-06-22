@@ -69,7 +69,7 @@ body.template-index header-component[data-sticky-state="inactive"] .menu-list__l
 }
 
 .menu-list__submenu {
-  --submenu-animation-speed: 0.2s !important;
+  --submenu-animation-speed: 0.35s !important;
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
