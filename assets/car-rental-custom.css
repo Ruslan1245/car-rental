@@ -71,7 +71,8 @@
 }
 
 /* Light blue header on all pages except homepage */
-body:not(.template-index) #header-group header-component,
-body:not(.template-index) #header-group .header__bar {
-  background-color: #D6E8F7 !important;
+body:not(.template-index) header-component {
+  --color-background-top-row: rgba(214, 232, 247, 1) !important;
+  --color-background-bottom-row: rgba(214, 232, 247, 1) !important;
+  --color-background: rgba(214, 232, 247, 1) !important;
 }
