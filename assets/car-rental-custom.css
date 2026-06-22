@@ -67,43 +67,27 @@ body.template-index header-component[data-sticky-state="inactive"] .header__unde
   background: transparent !important;
 }
 
-/* Dropdown outer: bypass Horizon clip-path; simple opacity+slide animation */
+/* Dropdown outer: position under triggering nav item */
 .menu-list__list-item > .menu-list__submenu {
-  width: 400px !important;
-  left: 0 !important;
+  width: 250px !important;
+  left: auto !important;
   right: auto !important;
-  top: 100% !important;
-  clip-path: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  transform: translateY(-6px) !important;
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s !important;
-}
-
-/* Show on hover / when JS sets aria-expanded */
-.menu-list__list-item:has([aria-expanded="true"]) > .menu-list__submenu,
-.menu-list__submenu:hover {
-  visibility: visible !important;
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s !important;
 }
 
 .menu-list__submenu {
+  --submenu-animation-speed: 0.35s !important;
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 }
 
-/* Dropdown inner: the actual visible box — white, blue border */
+/* Dropdown inner: visible white box with blue border */
 .menu-list__submenu-inner {
   background-color: #ffffff !important;
   border: 1.5px solid #a8d3f0 !important;
   border-radius: 12px !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10) !important;
   padding: 10px 0 !important;
-  opacity: 1 !important;
-  transform: none !important;
 }
 
 /* Dropdown layout: vertical list */
