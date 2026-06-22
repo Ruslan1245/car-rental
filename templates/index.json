@@ -265,24 +265,24 @@
           "type": "feature",
           "settings": {
             "icon_type": "rates",
-            "title": "Feature title",
-            "description": "Describe this feature in a few words."
+            "title": "Competitive rates",
+            "description": "Access premium service at distance-based prices that are fair to you and our chauffeurs."
           }
         },
         "feature_NMG4de": {
           "type": "feature",
           "settings": {
             "icon_type": "airport",
-            "title": "Feature title",
-            "description": "Describe this feature in a few words."
+            "title": "Seamless airport travel",
+            "description": "Relax with 1 hour of complimentary wait time and real-time flight tracking."
           }
         },
         "feature_K63QkL": {
           "type": "feature",
           "settings": {
             "icon_type": "clock",
-            "title": "Feature title",
-            "description": "Describe this feature in a few words."
+            "title": "Travel on your terms",
+            "description": "Stay flexible and in charge of your schedule. It's quick and easy to cancel or make changes to any ride."
           }
         }
       },
