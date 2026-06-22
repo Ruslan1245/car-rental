@@ -21,8 +21,32 @@
   transform: rotate(180deg);
 }
 
-/* Navigation dropdown items: bold + larger font */
+/* Navigation dropdown items: bold + larger font + centered */
 .mega-menu__link {
   font-size: 1rem !important;
   font-weight: 700 !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.mega-menu__grid {
+  justify-content: center !important;
+  justify-items: center !important;
+}
+
+.mega-menu__list {
+  align-items: center !important;
+}
+
+.mega-menu__column {
+  text-align: center !important;
+}
+
+/* Navigation dropdown: slower open/close transition */
+.menu-list__submenu {
+  --submenu-animation-speed: 0.45s !important;
+}
+
+.menu-list__submenu-inner {
+  transition-duration: 0.35s !important;
 }
