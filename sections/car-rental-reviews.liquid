@@ -164,6 +164,7 @@
   max-width: 1200px;
   margin-inline: auto;
   overflow-x: auto;
+  overflow-y: visible;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
@@ -195,6 +196,14 @@
   flex-shrink: 0;
   scroll-snap-align: start;
   box-sizing: border-box;
+}
+
+@media (max-width: 400px) {
+  .cr-reviews__card {
+    min-width: calc(100vw - 64px);
+    width: calc(100vw - 64px);
+    padding: 20px;
+  }
 }
 
 .cr-reviews__stars {

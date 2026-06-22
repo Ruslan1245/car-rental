@@ -113,3 +113,13 @@ body.template-index header-component[data-sticky-state="active"] {
   --color-background-bottom-row: rgba(214, 232, 247, 1) !important;
   --color-background: rgba(214, 232, 247, 1) !important;
 }
+
+/* Prevent horizontal overflow from carousel tracks bleeding into the page */
+.cr-reviews,
+.cr-vehicles,
+.cr-fleet,
+.cr-features,
+.cr-services,
+.cr-app {
+  overflow-x: clip;
+}
