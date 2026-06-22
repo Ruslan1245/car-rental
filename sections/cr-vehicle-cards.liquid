@@ -1,0 +1,280 @@
+<div class="cr-vehicles" style="background: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;">
+  <div class="cr-vehicles__inner">
+    {% if section.settings.heading != blank %}
+      <h2 class="cr-vehicles__heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+    <div class="cr-vehicles__grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'vehicle' %}
+          <div class="cr-vehicles__card" {{ block.shopify_attributes }}>
+            <div class="cr-vehicles__image-wrap">
+              {% if block.settings.image != blank %}
+                {{ block.settings.image | image_url: width: 700 | image_tag: width: 700, loading: 'lazy', class: 'cr-vehicles__image' }}
+              {% else %}
+                <div class="cr-vehicles__image-placeholder"></div>
+              {% endif %}
+            </div>
+            <div class="cr-vehicles__content">
+              <h3 class="cr-vehicles__title">{{ block.settings.title }}</h3>
+              {% if block.settings.models != blank %}
+                <p class="cr-vehicles__models">{{ block.settings.models }}</p>
+              {% endif %}
+              <div class="cr-vehicles__divider"></div>
+              <ul class="cr-vehicles__features">
+                {% if block.settings.feature_1 != blank %}
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    {{ block.settings.feature_1 }}
+                  </li>
+                {% endif %}
+                {% if block.settings.feature_2 != blank %}
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    {{ block.settings.feature_2 }}
+                  </li>
+                {% endif %}
+                {% if block.settings.feature_3 != blank %}
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    {{ block.settings.feature_3 }}
+                  </li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+.cr-vehicles__inner {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 5vw, 80px);
+}
+
+.cr-vehicles__heading {
+  font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+  font-weight: 600;
+  margin: 0 0 40px;
+  color: #111;
+}
+
+.cr-vehicles__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.cr-vehicles__card {
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.cr-vehicles__image-wrap {
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.cr-vehicles__image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.cr-vehicles__card:hover .cr-vehicles__image {
+  transform: scale(1.02);
+}
+
+.cr-vehicles__image-placeholder {
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(135deg, #e8f0f8 0%, #d0e4f0 100%);
+}
+
+.cr-vehicles__content {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cr-vehicles__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #111;
+  line-height: 1.2;
+}
+
+.cr-vehicles__models {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cr-vehicles__divider {
+  width: 48px;
+  height: 2px;
+  background: #4a7cf5;
+  margin: 16px 0;
+  border-radius: 2px;
+}
+
+.cr-vehicles__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cr-vehicles__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.cr-vehicles__features li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .cr-vehicles__grid {
+    grid-template-columns: 1fr;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Vehicle Cards",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Choose your vehicle class"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "vehicle",
+      "name": "Vehicle",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Vehicle image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Vehicle class",
+          "default": "Business Class"
+        },
+        {
+          "type": "text",
+          "id": "models",
+          "label": "Models",
+          "default": "Mercedes E-Class, BMW 5 Series, Audi A6, or similar"
+        },
+        {
+          "type": "text",
+          "id": "feature_1",
+          "label": "Feature 1",
+          "default": "Fits up to 3 people"
+        },
+        {
+          "type": "text",
+          "id": "feature_2",
+          "label": "Feature 2",
+          "default": "Fits 2 carry-on bags, or 2 standard check-in bags"
+        },
+        {
+          "type": "text",
+          "id": "feature_3",
+          "label": "Feature 3",
+          "default": "Available in most of our business districts"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Vehicle Cards",
+      "blocks": [
+        {
+          "type": "vehicle",
+          "settings": {
+            "title": "Business Class",
+            "models": "Mercedes E-Class, BMW 5 Series, Audi A6, Cadillac XTS, or similar",
+            "feature_1": "Fits up to 3 people",
+            "feature_2": "Fits 2 carry-on bags, or 2 standard check-in, or 1 extra large check-in bag",
+            "feature_3": "Available in most of our business districts"
+          }
+        },
+        {
+          "type": "vehicle",
+          "settings": {
+            "title": "First Class",
+            "models": "Mercedes S-Class, BMW 7 Series, Audi A8, or similar",
+            "feature_1": "Fits up to 3 people",
+            "feature_2": "Fits 2 carry-on bags, or 2 standard check-in, or 1 extra large check-in bag",
+            "feature_3": "Available in most of our business districts"
+          }
+        },
+        {
+          "type": "vehicle",
+          "settings": {
+            "title": "Business Van / SUV",
+            "models": "Mercedes V-Class, Chevy Suburban, Cadillac Escalade, GMC Yukon Denali, or similar",
+            "feature_1": "Fits up to 5 people",
+            "feature_2": "Fits 12 carry-on bags or 8 standard check-in or 6 extra large check-in bags",
+            "feature_3": "Best for larger parties, lots of luggage, or families"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -96,25 +96,25 @@
         "feat_1": {
           "type": "feature",
           "settings": {
-            "icon_type": "globe",
-            "title": "Airport transfers",
-            "description": "Meet-and-greet service at arrivals. Your driver tracks your flight and adjusts for any delays."
+            "icon_type": "rates",
+            "title": "Competitive rates",
+            "description": "Access premium service at distance-based prices that are fair to you and our chauffeurs."
           }
         },
         "feat_2": {
           "type": "feature",
           "settings": {
-            "icon_type": "clock",
-            "title": "Train station pickups",
-            "description": "Seamless transfers from major rail hubs. No waiting, no stress — just step off the train and go."
+            "icon_type": "globe",
+            "title": "Seamless airport travel",
+            "description": "Relax with 1 hour of complimentary wait time and real-time flight tracking."
           }
         },
         "feat_3": {
           "type": "feature",
           "settings": {
-            "icon_type": "car",
-            "title": "Hotel & city transfers",
-            "description": "Point-to-point rides between hotels, offices, venues, and any address in the city."
+            "icon_type": "clock",
+            "title": "Travel on your terms",
+            "description": "Stay flexible and in charge of your schedule. It's quick and easy to cancel or make changes to any ride."
           }
         }
       },
@@ -124,11 +124,57 @@
         "feat_3"
       ],
       "settings": {
-        "heading": "Every journey, covered.",
+        "heading": "",
         "heading_color": "#7a9cbf",
-        "background_color": "#f5f0ea",
-        "padding_top": 64,
-        "padding_bottom": 64
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "transfer_vehicles": {
+      "type": "cr-vehicle-cards",
+      "blocks": {
+        "vehicle_1": {
+          "type": "vehicle",
+          "settings": {
+            "title": "Business Class",
+            "models": "Mercedes E-Class, BMW 5 Series, Audi A6, Cadillac XTS, or similar",
+            "feature_1": "Fits up to 3 people",
+            "feature_2": "Fits 2 carry-on bags, or 2 standard check-in, or 1 extra large check-in bag",
+            "feature_3": "Available in most of our business districts"
+          }
+        },
+        "vehicle_2": {
+          "type": "vehicle",
+          "settings": {
+            "title": "First Class",
+            "models": "Mercedes S-Class, BMW 7 Series, Audi A8, or similar",
+            "feature_1": "Fits up to 3 people",
+            "feature_2": "Fits 2 carry-on bags, or 2 standard check-in, or 1 extra large check-in bag",
+            "feature_3": "Available in most of our business districts"
+          }
+        },
+        "vehicle_3": {
+          "type": "vehicle",
+          "settings": {
+            "title": "Business Van / SUV",
+            "models": "Mercedes V-Class, Chevy Suburban, Cadillac Escalade, GMC Yukon Denali, or similar",
+            "feature_1": "Fits up to 5 people",
+            "feature_2": "Fits 12 carry-on bags or 8 standard check-in or 6 extra large check-in bags",
+            "feature_3": "Best for larger parties, lots of luggage, or families"
+          }
+        }
+      },
+      "block_order": [
+        "vehicle_1",
+        "vehicle_2",
+        "vehicle_3"
+      ],
+      "settings": {
+        "heading": "Choose your vehicle class",
+        "background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 60
       }
     },
     "transfer_text_image_1": {
@@ -249,9 +295,10 @@
   "order": [
     "transfer_hero",
     "transfer_features",
+    "transfer_reviews",
+    "transfer_vehicles",
     "transfer_text_image_1",
     "transfer_text_image_2",
-    "transfer_reviews",
     "transfer_faq"
   ]
 }
