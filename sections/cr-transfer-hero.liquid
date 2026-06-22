@@ -1,16 +1,18 @@
-<section class="cr-th" style="background: {{ section.settings.background_color }};">
+<section class="cr-th">
+  <div class="cr-th__bg">
+    {% if section.settings.image != blank %}
+      {{ section.settings.image | image_url: width: 1600 | image_tag: width: 1600, loading: 'eager', class: 'cr-th__bg-image' }}
+    {% else %}
+      <div class="cr-th__bg-placeholder"></div>
+    {% endif %}
+    <div class="cr-th__overlay"></div>
+  </div>
+
   <div class="cr-th__inner">
     <div class="cr-th__left">
       {% if section.settings.heading != blank %}
         <h1 class="cr-th__heading">{{ section.settings.heading }}</h1>
       {% endif %}
-      <div class="cr-th__image-wrap">
-        {% if section.settings.image != blank %}
-          {{ section.settings.image | image_url: width: 1200 | image_tag: width: 1200, loading: 'eager', class: 'cr-th__image' }}
-        {% else %}
-          <div class="cr-th__image-placeholder"></div>
-        {% endif %}
-      </div>
     </div>
 
     <div class="cr-th__right">
@@ -99,7 +101,6 @@
       });
     });
 
-    // Set today's date as default
     var dateInput = document.querySelector('.cr-th__form input[type="date"]');
     if (dateInput && !dateInput.value) {
       var today = new Date();
@@ -113,63 +114,72 @@
 
 {% stylesheet %}
 .cr-th {
-  padding-block: clamp(40px, 6vw, 80px);
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-block: clamp(48px, 8vw, 96px);
+}
+
+.cr-th__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.cr-th__bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cr-th__bg-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a3a5c 0%, #0f2240 100%);
+}
+
+.cr-th__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
 }
 
 .cr-th__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: clamp(16px, 5vw, 80px);
   display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 32px;
-  align-items: start;
+  grid-template-columns: 1fr 380px;
+  gap: 48px;
+  align-items: center;
 }
 
 .cr-th__left {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .cr-th__heading {
-  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-size: clamp(1.875rem, 4.5vw, 3rem);
   font-weight: 700;
   line-height: 1.15;
-  color: #111;
+  color: #ffffff;
   margin: 0;
-  max-width: 520px;
-}
-
-.cr-th__image-wrap {
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.cr-th__image {
-  width: 100%;
-  height: clamp(280px, 40vw, 480px);
-  object-fit: cover;
-  display: block;
-}
-
-.cr-th__image-placeholder {
-  width: 100%;
-  height: clamp(280px, 40vw, 480px);
-  background: linear-gradient(135deg, #d6e8f7 0%, #b8d4ee 100%);
-}
-
-/* Form card */
-.cr-th__right {
-  position: sticky;
-  top: 100px;
+  max-width: 500px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
 }
 
 .cr-th__card {
   background: #fff;
-  border: 1px solid #e0e0e0;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.22);
   overflow: hidden;
 }
 
@@ -211,8 +221,18 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 16px;
-  border-bottom: 1px solid #f0f0f0;
+  padding: 13px 16px;
+  border-bottom: 1px solid #ebebeb;
+  background: #f6f6f6;
+  transition: background 0.15s;
+}
+
+.cr-th__field:last-of-type {
+  border-bottom: none;
+}
+
+.cr-th__field:focus-within {
+  background: #efefef;
 }
 
 .cr-th__field-icon {
@@ -264,10 +284,11 @@
 @media (max-width: 900px) {
   .cr-th__inner {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 
-  .cr-th__right {
-    position: static;
+  .cr-th__heading {
+    max-width: 100%;
   }
 }
 {% endstylesheet %}
