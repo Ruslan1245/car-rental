@@ -17,14 +17,20 @@ body.template-index header-component[data-sticky-state="inactive"] .menu-list__l
   padding-inline: 18px !important;
 }
 
-/* Nav links: permanent rounded border */
+/* Nav links: no border by default, rounded corners ready */
 .menu-list__link {
-  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  border: 1.5px solid transparent !important;
   border-radius: 20px !important;
-  transition: border-color 0.3s ease !important;
+  transition: border-color 0.2s ease !important;
 }
 
-/* On scroll (sticky) + non-homepage: blue border */
+/* Homepage transparent: border appears only on hover / keyboard focus */
+body.template-index header-component[data-sticky-state="inactive"] .menu-list__link:hover,
+body.template-index header-component[data-sticky-state="inactive"] .menu-list__link:focus-visible {
+  border-color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* Scrolled + non-homepage: permanent blue border */
 body.template-index header-component[data-sticky-state="active"] .menu-list__link,
 body:not(.template-index) header-component .menu-list__link {
   border-color: rgba(15, 99, 189, 0.35) !important;
