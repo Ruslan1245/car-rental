@@ -88,9 +88,18 @@
 }
 
 .cr-features__item:hover,
-.cr-services__card:hover,
+.cr-services__card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.09), 0 8px 28px rgba(0,0,0,0.07);
+}
+
+/* Vehicle cards: subtle zoom on hover */
+.cr-vehicles__card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
 .cr-vehicles__card:hover {
   box-shadow: 0 4px 16px rgba(0,0,0,0.09), 0 8px 28px rgba(0,0,0,0.07);
+  transform: scale(1.02);
 }
 
 /* Review cards: even lighter shadow */
