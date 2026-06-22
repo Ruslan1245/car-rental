@@ -84,8 +84,7 @@
 
 /* Sitewide cards: subtle shadow, no hover lift */
 .cr-features__item,
-.cr-services__card,
-.cr-vehicles__card {
+.cr-services__card {
   box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.05);
   transition: box-shadow 0.25s ease;
 }
@@ -95,9 +94,11 @@
   box-shadow: 0 4px 16px rgba(0,0,0,0.09), 0 8px 28px rgba(0,0,0,0.07);
 }
 
-/* Vehicle cards: subtle zoom on hover */
+/* Vehicle cards: very smooth zoom + shadow on hover */
 .cr-vehicles__card {
-  transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.05);
+  transition: box-shadow 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .cr-vehicles__card:hover {
