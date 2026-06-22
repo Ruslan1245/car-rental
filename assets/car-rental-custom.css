@@ -21,18 +21,26 @@
   transform: rotate(180deg);
 }
 
-/* Navigation dropdown: items in a row, centered, larger text */
-.mega-menu__list {
+/* Navigation dropdown: override grid with flex to properly center items */
+.mega-menu__grid {
+  display: flex !important;
   justify-content: center !important;
+  align-items: center !important;
 }
 
-/* Both links live inside one <li> — make that column display as a row */
+.mega-menu__list {
+  display: flex !important;
+  justify-content: center !important;
+  grid-column: unset !important;
+  width: auto !important;
+}
+
+/* Both links live inside one <li> — display side by side */
 .mega-menu__column {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
+  grid-column: unset !important;
 }
 
 .mega-menu__link {
