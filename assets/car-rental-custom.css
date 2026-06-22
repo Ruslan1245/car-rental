@@ -110,8 +110,15 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
 }
 
-/* Light blue header on all pages except homepage */
+/* Light blue header on all non-homepage pages */
 body:not(.template-index) header-component {
+  --color-background-top-row: rgba(214, 232, 247, 1) !important;
+  --color-background-bottom-row: rgba(214, 232, 247, 1) !important;
+  --color-background: rgba(214, 232, 247, 1) !important;
+}
+
+/* Homepage: light blue background only when scrolled (sticky active) */
+body.template-index header-component[data-sticky-state="active"] {
   --color-background-top-row: rgba(214, 232, 247, 1) !important;
   --color-background-bottom-row: rgba(214, 232, 247, 1) !important;
   --color-background: rgba(214, 232, 247, 1) !important;
