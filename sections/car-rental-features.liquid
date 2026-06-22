@@ -10,28 +10,52 @@
         <div class="cr-features__item" {{ block.shopify_attributes }}>
           <div class="cr-features__icon">
             {% case block.settings.icon_type %}
-              {% when 'rates' %}
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <rect x="6" y="10" width="36" height="28" rx="3" stroke="#4a7cf5" stroke-width="2.5" fill="none"/>
-                  <line x1="6" y1="18" x2="42" y2="18" stroke="#4a7cf5" stroke-width="2.5"/>
-                  <line x1="14" y1="26" x2="22" y2="26" stroke="#4a7cf5" stroke-width="2.5" stroke-linecap="round"/>
-                  <line x1="14" y1="32" x2="20" y2="32" stroke="#4a7cf5" stroke-width="2.5" stroke-linecap="round"/>
+              {% when 'globe' %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                 </svg>
-              {% when 'airport' %}
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2-7h-4l-2 2h-3l2-4-2-4h3l2 2h4l-2-7h3z"/>
+              {% when 'sync' %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 4 23 10 17 10"/>
+                  <polyline points="1 20 1 14 7 14"/>
+                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
                 </svg>
               {% when 'clock' %}
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <circle cx="24" cy="24" r="16" stroke="#4a7cf5" stroke-width="2.5"/>
-                  <polyline points="24,14 24,24 30,28" stroke="#4a7cf5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              {% when 'headphones' %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                  <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/>
+                  <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+                </svg>
+              {% when 'list' %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="8" y1="6" x2="21" y2="6"/>
+                  <line x1="8" y1="12" x2="21" y2="12"/>
+                  <line x1="8" y1="18" x2="21" y2="18"/>
+                  <circle cx="3" cy="6" r="1" fill="#4a7cf5" stroke="none"/>
+                  <circle cx="3" cy="12" r="1" fill="#4a7cf5" stroke="none"/>
+                  <circle cx="3" cy="18" r="1" fill="#4a7cf5" stroke="none"/>
+                </svg>
+              {% when 'cloud' %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                </svg>
+              {% when 'rates' %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="5" width="20" height="14" rx="2"/>
+                  <line x1="2" y1="10" x2="22" y2="10"/>
                 </svg>
               {% when 'car' %}
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <path d="M8 28 L12 16 C12.8 14 14.5 13 16.5 13 L31.5 13 C33.5 13 35.2 14 36 16 L40 28" stroke="#4a7cf5" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
-                  <rect x="6" y="28" width="36" height="10" rx="2" stroke="#4a7cf5" stroke-width="2.5" fill="none"/>
-                  <circle cx="14" cy="38" r="4" stroke="#4a7cf5" stroke-width="2.5" fill="white"/>
-                  <circle cx="34" cy="38" r="4" stroke="#4a7cf5" stroke-width="2.5" fill="white"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v9a2 2 0 0 1-2 2h-2"/>
+                  <circle cx="7" cy="17" r="2"/>
+                  <circle cx="17" cy="17" r="2"/>
                 </svg>
             {% endcase %}
           </div>
@@ -56,7 +80,7 @@
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 600;
   margin: 0;
-  font-style: italic;
+  font-style: normal;
 }
 
 .cr-features__grid {
@@ -157,12 +181,16 @@
           "id": "icon_type",
           "label": "Icon",
           "options": [
-            { "value": "rates", "label": "Price / Rates" },
-            { "value": "airport", "label": "Airport / Airplane" },
+            { "value": "globe", "label": "Globe / Global" },
+            { "value": "sync", "label": "Sync / Refresh" },
             { "value": "clock", "label": "Clock / Time" },
+            { "value": "headphones", "label": "Headphones / Support" },
+            { "value": "list", "label": "List / Management" },
+            { "value": "cloud", "label": "Cloud / Sustainability" },
+            { "value": "rates", "label": "Card / Rates" },
             { "value": "car", "label": "Car" }
           ],
-          "default": "rates"
+          "default": "globe"
         },
         {
           "type": "text",

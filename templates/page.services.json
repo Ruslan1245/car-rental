@@ -158,7 +158,7 @@
         "feat_1": {
           "type": "feature",
           "settings": {
-            "icon_type": "rates",
+            "icon_type": "globe",
             "title": "Global reliability",
             "description": "Count on instant confirmation and high-quality service in over 60 countries."
           }
@@ -166,7 +166,7 @@
         "feat_2": {
           "type": "feature",
           "settings": {
-            "icon_type": "rates",
+            "icon_type": "sync",
             "title": "Competitive rates",
             "description": "Access excellent service at distance-based rates that are fair to you and our chauffeurs."
           }
@@ -182,7 +182,7 @@
         "feat_4": {
           "type": "feature",
           "settings": {
-            "icon_type": "clock",
+            "icon_type": "headphones",
             "title": "Priority 24/7 support",
             "description": "Receive multilingual care whenever you need it via chat, phone, or email."
           }
@@ -190,7 +190,7 @@
         "feat_5": {
           "type": "feature",
           "settings": {
-            "icon_type": "car",
+            "icon_type": "list",
             "title": "Simplified management",
             "description": "Reduce accounting hassles with detailed reporting and individual or monthly invoicing."
           }
@@ -198,7 +198,7 @@
         "feat_6": {
           "type": "feature",
           "settings": {
-            "icon_type": "airport",
+            "icon_type": "cloud",
             "title": "Sustainability",
             "description": "Support your ESG goals with carbon-offset rides, and electric vehicles in many locations."
           }
