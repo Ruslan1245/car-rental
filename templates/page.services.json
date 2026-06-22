@@ -265,9 +265,10 @@
       "type": "cr-text-image",
       "settings": {
         "heading": "Airport transfer in global cities",
-        "text": "<p>If you've just stepped off a plane, tired and aching from a long flight, there can be no better stress-reliever than a chauffeur airport transfer direct to your destination. Our transfers are available in hundreds of cities and airports across the world.</p><p>Every ride is booked in advance, so your driver is already waiting when you land — no queues, no haggling, no uncertainty. Flight tracking means we adjust automatically if your arrival is delayed, and you get up to 60 minutes of complimentary wait time at no extra cost.</p><p>From New York and London to Dubai and Tokyo, our global network ensures the same premium standard wherever your business takes you.</p>",
+        "text": "<p>If you've just stepped off a plane, tired and aching from a long flight, there can be no better stress-reliever than a chauffeur airport transfer direct to your destination. Our transfers are available in hundreds of cities and airports across the world.</p><p>Every ride is booked in advance, so your driver is already waiting when you land — no queues, no haggling, no uncertainty. </p><p>From New York and London to Dubai and Tokyo, our global network ensures the same premium standard wherever your business takes you.</p>",
         "button_label": "",
         "button_link": "",
+        "image": "shopify://shop_images/service_woman.jpg",
         "image_position": "right",
         "background_color": "#ffffff",
         "padding_top": 60,
@@ -278,9 +279,10 @@
       "type": "cr-text-image",
       "settings": {
         "heading": "Get to or from the airport",
-        "text": "<p>A chauffeur service aims to achieve the very highest possible standards for all its passengers. Whether you're stepping out of LAX or need to be dropped off at Heathrow, we'll get you there relaxed, recharged and ready.</p><p>Departing? We'll pick you up from your home, office or hotel with plenty of time to spare — your driver handles the luggage while you focus on your journey ahead. Need a return transfer after a late-night arrival? We operate around the clock, every day of the year.</p><p>All vehicles are premium class, immaculately maintained, and driven by professionally trained chauffeurs who know the fastest routes and respect your need for quiet or conversation.</p>",
+        "text": "<p>A chauffeur service aims to achieve the very highest possible standards for all its passengers. Whether you're stepping out of LAX or need to be dropped off at Heathrow, we'll get you there relaxed, recharged and ready.</p><p>Departing? We'll pick you up from your home, office or hotel with plenty of time to spare — your driver handles the luggage while you focus on your journey ahead. Need a return transfer after a late-night arrival? We operate around the clock, every day of the year.</p>",
         "button_label": "",
         "button_link": "",
+        "image": "shopify://shop_images/srvice_partner.jpg",
         "image_position": "left",
         "background_color": "#ffffff",
         "padding_top": 0,
