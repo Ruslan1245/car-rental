@@ -2,6 +2,21 @@
    Car Rental – custom overrides
    ============================================= */
 
+/* Homepage transparent header: white nav text */
+body.template-index header-component[data-sticky-state="inactive"] .menu-list__link-title {
+  color: #ffffff !important;
+}
+
+/* White chevron for transparent header */
+body.template-index header-component[data-sticky-state="inactive"] .menu-list__link[aria-haspopup="true"] .menu-list__link-title::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+/* More spacing between top-level nav items */
+.menu-list__list-item > .menu-list__link {
+  padding-inline: 18px !important;
+}
+
 /* Navigation: chevron arrow on items that have a dropdown */
 .menu-list__link[aria-haspopup="true"] .menu-list__link-title::after {
   content: '';
