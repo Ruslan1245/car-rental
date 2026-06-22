@@ -17,14 +17,19 @@ body.template-index header-component[data-sticky-state="inactive"] .menu-list__l
   padding-inline: 18px !important;
 }
 
-/* Nav links: no border by default, rounded corners ready */
+/* Nav links: base — no border, rounded shape ready */
 .menu-list__link {
   border: 1.5px solid transparent !important;
   border-radius: 20px !important;
   transition: border-color 0.2s ease !important;
 }
 
-/* Homepage transparent: border appears only on hover / keyboard focus */
+/* Homepage transparent: force no border at rest */
+body.template-index header-component[data-sticky-state="inactive"] .menu-list__link {
+  border-color: transparent !important;
+}
+
+/* Homepage transparent: border on hover / keyboard focus only */
 body.template-index header-component[data-sticky-state="inactive"] .menu-list__link:hover,
 body.template-index header-component[data-sticky-state="inactive"] .menu-list__link:focus-visible {
   border-color: rgba(255, 255, 255, 0.55) !important;
@@ -55,36 +60,21 @@ body:not(.template-index) header-component .menu-list__link {
   transform: rotate(180deg);
 }
 
-/* Navigation dropdown: dark Blacklane style */
+/* Navigation dropdown: narrow white panel */
 .menu-list__submenu {
-  --submenu-animation-speed: 0.5s !important;
-  background-color: rgba(22, 22, 22, 0.97) !important;
-  border-radius: 12px !important;
+  width: max-content !important;
+  min-width: 160px !important;
+  right: auto !important;
+  background-color: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.11) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.09) !important;
   overflow: hidden !important;
-  transition: clip-path 0.5s var(--ease-out-cubic, ease),
-              visibility 0s linear 0.35s !important;
-}
-
-.menu-list__list-item:has([aria-expanded="true"]) > .menu-list__submenu,
-.menu-list__submenu:hover {
-  transition: clip-path 0.5s var(--ease-out-cubic, ease),
-              visibility 0s linear 0s !important;
-}
-
-/* Invisible bridge so mouse doesn't lose hover in the gap */
-.menu-list__submenu::before {
-  content: '';
-  position: absolute;
-  top: -24px;
-  left: 0;
-  right: 0;
-  height: 24px;
 }
 
 .menu-list__submenu-inner {
-  transition-duration: 0.4s !important;
   background-color: transparent !important;
-  padding: 8px 0 !important;
+  padding: 6px 0 !important;
 }
 
 /* Dropdown layout: vertical list */
@@ -105,19 +95,19 @@ body:not(.template-index) header-component .menu-list__link {
 }
 
 .mega-menu__link {
-  font-size: 0.9375rem !important;
+  font-size: 0.9rem !important;
   font-weight: 400 !important;
-  color: #ffffff !important;
+  color: #1a1a1a !important;
   justify-content: flex-start !important;
   text-align: left !important;
-  padding: 10px 24px !important;
+  padding: 10px 20px !important;
   white-space: nowrap !important;
-  opacity: 1;
-  transition: opacity 0.15s ease !important;
+  transition: background 0.15s ease, color 0.15s ease !important;
 }
 
 .mega-menu__link:hover {
-  opacity: 0.65 !important;
+  background: #f0f6fd !important;
+  color: #0f63bd !important;
 }
 
 /* Sitewide cards: subtle shadow, no hover lift */
