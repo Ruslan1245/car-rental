@@ -321,6 +321,7 @@
       ],
       "settings": {
         "heading": "Frequently Asked Questions",
+        "image": "shopify://shop_images/service_man.jpg",
         "background_color": "#ffffff",
         "padding_top": 60,
         "padding_bottom": 60
