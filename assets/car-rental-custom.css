@@ -61,6 +61,12 @@ body.template-index header-component[data-sticky-state="inactive"] .menu-list__l
   --color-submenu: transparent !important;
 }
 
+/* Keep homepage transparent header transparent on hover — prevents blue field flashing before dropdown */
+body.template-index header-component[data-sticky-state="inactive"] .header__underlay-closed,
+body.template-index header-component[data-sticky-state="inactive"] .header__underlay-open {
+  background: transparent !important;
+}
+
 /* Dropdown outer: position it under the triggering nav item, not full-width */
 .menu-list__list-item > .menu-list__submenu {
   width: 400px !important;
