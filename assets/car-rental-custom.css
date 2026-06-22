@@ -51,16 +51,16 @@
 
 /* Navigation dropdown: light blue background + slower transition */
 .menu-list__submenu {
-  --submenu-animation-speed: 0.4s !important;
+  --submenu-animation-speed: 0.6s !important;
   background-color: #D6E8F7 !important;
-  transition: clip-path 0.4s var(--ease-out-cubic, ease),
-              visibility 0s linear 0.25s !important;
+  transition: clip-path 0.6s var(--ease-out-cubic, ease),
+              visibility 0s linear 0.45s !important;
 }
 
 /* When open or hovered — no delay on visibility */
 .menu-list__list-item:has([aria-expanded="true"]) > .menu-list__submenu,
 .menu-list__submenu:hover {
-  transition: clip-path 0.4s var(--ease-out-cubic, ease),
+  transition: clip-path 0.6s var(--ease-out-cubic, ease),
               visibility 0s linear 0s !important;
 }
 
@@ -68,14 +68,14 @@
 .menu-list__submenu::before {
   content: '';
   position: absolute;
-  top: -16px;
+  top: -24px;
   left: 0;
   right: 0;
-  height: 16px;
+  height: 24px;
 }
 
 .menu-list__submenu-inner {
-  transition-duration: 0.3s !important;
+  transition-duration: 0.5s !important;
   background-color: #D6E8F7 !important;
 }
 
