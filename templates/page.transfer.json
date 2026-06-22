@@ -214,15 +214,49 @@
             "feature_2": "Fits 12 carry-on bags or 8 standard check-in or 6 extra large check-in bags",
             "feature_3": "Best for larger parties, lots of luggage, or families"
           }
+        },
+        "vehicle_4": {
+          "type": "vehicle",
+          "settings": {
+            "title": "Electric Class",
+            "models": "Tesla Model S, Mercedes EQS, BMW iX, or similar",
+            "feature_1": "Fits up to 3 people",
+            "feature_2": "Zero-emission ride with premium comfort",
+            "feature_3": "Available in selected cities"
+          }
+        },
+        "vehicle_5": {
+          "type": "vehicle",
+          "settings": {
+            "title": "First Class XL",
+            "models": "Mercedes GLS, BMW X7, Audi Q7, or similar",
+            "feature_1": "Fits up to 4 people",
+            "feature_2": "Fits 4 carry-on bags or 4 standard check-in bags",
+            "feature_3": "Ideal for families and executive travel"
+          }
+        },
+        "vehicle_6": {
+          "type": "vehicle",
+          "settings": {
+            "title": "Sprinter Van",
+            "models": "Mercedes Sprinter, or similar",
+            "feature_1": "Fits up to 12 people",
+            "feature_2": "Large luggage capacity for groups",
+            "feature_3": "Perfect for group transfers and events"
+          }
         }
       },
       "block_order": [
         "vehicle_1",
         "vehicle_2",
-        "vehicle_3"
+        "vehicle_3",
+        "vehicle_4",
+        "vehicle_5",
+        "vehicle_6"
       ],
       "settings": {
         "heading": "Choose your vehicle class",
+        "fleet_url": "/pages/fleet",
         "background_color": "#ffffff",
         "padding_top": 0,
         "padding_bottom": 60
