@@ -41,7 +41,7 @@
   font-weight: 600;
   text-align: center;
   margin: 0 0 40px;
-  font-style: italic;
+  font-style: normal;
 }
 
 .cr-tailored__grid {
@@ -50,9 +50,15 @@
   gap: 32px;
 }
 
+.cr-tailored__item {
+  background: #deeef9;
+  border: 1px solid #aacde8;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
 .cr-tailored__image-wrap {
   overflow: hidden;
-  border-radius: 8px;
   aspect-ratio: 4/3;
 }
 
@@ -70,12 +76,11 @@
 
 .cr-tailored__image-placeholder {
   aspect-ratio: 4/3;
-  background: #e8e8e8;
-  border-radius: 8px;
+  background: #c2ddf0;
 }
 
 .cr-tailored__content {
-  padding-top: 16px;
+  padding: 20px 20px 24px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -90,7 +95,7 @@
 
 .cr-tailored__desc {
   font-size: 0.875rem;
-  color: #555;
+  color: #111;
   line-height: 1.6;
   margin: 0;
 }
