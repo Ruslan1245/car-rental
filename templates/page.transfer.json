@@ -188,6 +188,8 @@
         "vehicle_1": {
           "type": "vehicle",
           "settings": {
+            "image_1": "shopify://shop_images/car_bently.jpg",
+            "image_2": "shopify://shop_images/car_merc.jpg",
             "title": "Business Class",
             "models": "Mercedes E-Class, BMW 5 Series, Audi A6, Cadillac XTS, or similar",
             "feature_1": "Fits up to 3 people",
@@ -198,6 +200,8 @@
         "vehicle_2": {
           "type": "vehicle",
           "settings": {
+            "image_1": "shopify://shop_images/car_merc_2.jpg",
+            "image_2": "shopify://shop_images/car_sport.jpg",
             "title": "First Class",
             "models": "Mercedes S-Class, BMW 7 Series, Audi A8, or similar",
             "feature_1": "Fits up to 3 people",
@@ -208,6 +212,8 @@
         "vehicle_3": {
           "type": "vehicle",
           "settings": {
+            "image_1": "shopify://shop_images/car_1classXL.jpg",
+            "image_2": "shopify://shop_images/car_escalade.jpg",
             "title": "Business Van / SUV",
             "models": "Mercedes V-Class, Chevy Suburban, Cadillac Escalade, GMC Yukon Denali, or similar",
             "feature_1": "Fits up to 5 people",
@@ -218,6 +224,8 @@
         "vehicle_4": {
           "type": "vehicle",
           "settings": {
+            "image_1": "shopify://shop_images/car_tesla_627014fa-4afd-4fb9-9523-1cf46168266d.jpg",
+            "image_2": "shopify://shop_images/car_tesla_2.jpg",
             "title": "Electric Class",
             "models": "Tesla Model S, Mercedes EQS, BMW iX, or similar",
             "feature_1": "Fits up to 3 people",
@@ -228,6 +236,8 @@
         "vehicle_5": {
           "type": "vehicle",
           "settings": {
+            "image_1": "shopify://shop_images/car_bmw_ff46edf6-689c-4231-aa97-2141ec9a0deb.jpg",
+            "image_2": "shopify://shop_images/car_merc.jpg",
             "title": "First Class XL",
             "models": "Mercedes GLS, BMW X7, Audi Q7, or similar",
             "feature_1": "Fits up to 4 people",
@@ -238,6 +248,7 @@
         "vehicle_6": {
           "type": "vehicle",
           "settings": {
+            "image_1": "shopify://shop_images/sprinter.jpg",
             "title": "Sprinter Van",
             "models": "Mercedes Sprinter, or similar",
             "feature_1": "Fits up to 12 people",
