@@ -56,7 +56,18 @@ body.template-index header-component[data-sticky-state="inactive"] .menu-list__l
   transform: rotate(180deg);
 }
 
-/* Dropdown outer: transparent — Horizon controls full-width positioning */
+/* Remove the full-width white underlay behind the dropdown */
+.header__underlay {
+  --color-submenu: transparent !important;
+}
+
+/* Dropdown outer: position it under the triggering nav item, not full-width */
+.menu-list__list-item > .menu-list__submenu {
+  width: 400px !important;
+  left: auto !important;
+  right: auto !important;
+}
+
 .menu-list__submenu {
   --submenu-animation-speed: 0.2s !important;
   background: transparent !important;
@@ -64,9 +75,8 @@ body.template-index header-component[data-sticky-state="inactive"] .menu-list__l
   box-shadow: none !important;
 }
 
-/* Dropdown inner: the actual visible box — white, blue border, 400px */
+/* Dropdown inner: the actual visible box — white, blue border */
 .menu-list__submenu-inner {
-  width: 400px !important;
   background-color: #ffffff !important;
   border: 1.5px solid #a8d3f0 !important;
   border-radius: 12px !important;
