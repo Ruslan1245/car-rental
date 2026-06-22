@@ -244,7 +244,7 @@
             "title": "Smooth landings, every time.",
             "description": "Delayed flight? Chauffeurs track arrivals and adjust accordingly. Plus, you have 1 hour of complimentary wait time just in case.",
             "link_label": "Learn more",
-            "link": "shopify://pages/services",
+            "link": "shopify://pages/transfer",
             "label": "ONE WAY TRANSFERS"
           }
         },
@@ -256,7 +256,7 @@
             "title": "Seize the day.",
             "description": "Reserve a dedicated chauffeur from 2 to 24 hours. They'll be on standby as long as you need them.",
             "link_label": "Learn more",
-            "link": "shopify://pages/services",
+            "link": "shopify://pages/transfer",
             "label": "BY THE HOUR"
           }
         }
