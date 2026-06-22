@@ -17,28 +17,10 @@ body.template-index header-component[data-sticky-state="inactive"] .menu-list__l
   padding-inline: 18px !important;
 }
 
-/* Nav links: base — no border, rounded shape ready */
+/* Nav links: no border, no outline — clean text only */
 .menu-list__link {
-  border: 1.5px solid transparent !important;
-  border-radius: 20px !important;
-  transition: border-color 0.2s ease !important;
-}
-
-/* Homepage transparent: force no border at rest */
-body.template-index header-component[data-sticky-state="inactive"] .menu-list__link {
-  border-color: transparent !important;
-}
-
-/* Homepage transparent: border on hover / keyboard focus only */
-body.template-index header-component[data-sticky-state="inactive"] .menu-list__link:hover,
-body.template-index header-component[data-sticky-state="inactive"] .menu-list__link:focus-visible {
-  border-color: rgba(255, 255, 255, 0.55) !important;
-}
-
-/* Scrolled + non-homepage: permanent blue border */
-body.template-index header-component[data-sticky-state="active"] .menu-list__link,
-body:not(.template-index) header-component .menu-list__link {
-  border-color: rgba(15, 99, 189, 0.35) !important;
+  border: none !important;
+  outline: none !important;
 }
 
 /* Navigation: chevron arrow on items that have a dropdown */
@@ -60,15 +42,15 @@ body:not(.template-index) header-component .menu-list__link {
   transform: rotate(180deg);
 }
 
-/* Navigation dropdown: narrow white panel */
+/* Navigation dropdown: narrow dark panel */
 .menu-list__submenu {
   width: max-content !important;
   min-width: 160px !important;
   right: auto !important;
-  background-color: #ffffff !important;
-  border: 1px solid rgba(0, 0, 0, 0.11) !important;
+  background-color: rgba(22, 22, 22, 0.97) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 10px !important;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.09) !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22) !important;
   overflow: hidden !important;
 }
 
@@ -97,17 +79,16 @@ body:not(.template-index) header-component .menu-list__link {
 .mega-menu__link {
   font-size: 0.9rem !important;
   font-weight: 400 !important;
-  color: #1a1a1a !important;
+  color: #ffffff !important;
   justify-content: flex-start !important;
   text-align: left !important;
-  padding: 10px 20px !important;
+  padding: 10px 22px !important;
   white-space: nowrap !important;
-  transition: background 0.15s ease, color 0.15s ease !important;
+  transition: opacity 0.15s ease !important;
 }
 
 .mega-menu__link:hover {
-  background: #f0f6fd !important;
-  color: #0f63bd !important;
+  opacity: 0.65 !important;
 }
 
 /* Sitewide cards: subtle shadow, no hover lift */
