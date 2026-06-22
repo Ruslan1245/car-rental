@@ -69,3 +69,9 @@
 .menu-list__submenu-inner {
   transition-duration: 0.3s !important;
 }
+
+/* Light blue header on all pages except homepage */
+body:not(.template-index) #header-group header-component,
+body:not(.template-index) #header-group .header__bar {
+  background-color: #D6E8F7 !important;
+}
