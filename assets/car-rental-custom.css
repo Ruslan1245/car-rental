@@ -20,7 +20,7 @@ body.template-index header-component[data-sticky-state="inactive"] .menu-list__l
 /* Nav hover: rounded blue border (transparent by default to prevent layout shift) */
 .menu-list__link {
   border: 1.5px solid transparent !important;
-  border-radius: 8px !important;
+  border-radius: 20px !important;
   transition: border-color 0.2s ease !important;
 }
 
