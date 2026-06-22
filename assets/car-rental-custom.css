@@ -56,33 +56,27 @@ body.template-index header-component[data-sticky-state="inactive"] .menu-list__l
   transform: rotate(180deg);
 }
 
-/* Remove the full-width white underlay behind the dropdown */
+/* Transparent submenu underlay — prevents full-width white strip */
 .header__underlay {
   --color-submenu: transparent !important;
 }
 
-/* Keep homepage transparent header transparent on hover — prevents blue field flashing before dropdown */
-body.template-index header-component[data-sticky-state="inactive"] .header__underlay-closed,
-body.template-index header-component[data-sticky-state="inactive"] .header__underlay-open {
-  background: transparent !important;
+/* Transparent header hover: prevent blue field flash by keeping background transparent */
+body.template-index header-component[data-sticky-state="inactive"] {
+  --color-background: transparent !important;
 }
 
-/* Dropdown outer: position under triggering nav item */
-.menu-list__list-item > .menu-list__submenu {
-  width: 250px !important;
-  left: auto !important;
-  right: auto !important;
-}
-
+/* Dropdown outer: let Horizon handle clip-path animation + positioning (no left/right override) */
 .menu-list__submenu {
-  --submenu-animation-speed: 0.35s !important;
+  --submenu-animation-speed: 0.4s !important;
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 }
 
-/* Dropdown inner: visible white box with blue border */
+/* Dropdown inner: 250px white panel — visual box only, outer handles positioning */
 .menu-list__submenu-inner {
+  width: 250px !important;
   background-color: #ffffff !important;
   border: 1.5px solid #a8d3f0 !important;
   border-radius: 12px !important;
