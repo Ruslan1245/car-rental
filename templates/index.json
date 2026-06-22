@@ -203,6 +203,7 @@
           "settings": {
             "rating": 5,
             "review_text": "Booked a chauffeur for a week-long business trip and the experience was flawless from start to finish. Every pickup was on time, the car was spotless, and the driver was professional and discreet. This is exactly the level of service I needed.",
+            "avatar": "shopify://shop_images/customer_8.jpg",
             "author_name": "Richard Okafor",
             "date": "2025-03-08"
           }
@@ -212,6 +213,7 @@
           "settings": {
             "rating": 5,
             "review_text": "I was skeptical at first but the service completely won me over. My flight landed 40 minutes late and the driver was still there waiting with a name sign, calm and friendly. Getting into that clean, quiet car after a long flight was such a relief.",
+            "avatar": "shopify://shop_images/customer_9.jpg",
             "author_name": "Sophie Brennan",
             "date": "2025-01-19"
           }

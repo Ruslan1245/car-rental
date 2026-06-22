@@ -132,6 +132,16 @@
             "date": "2019-05-12"
           }
         },
+        "review_Rw8UJz": {
+          "type": "review",
+          "settings": {
+            "rating": 4,
+            "review_text": "I have been using this service for over a year now and more of my clients keep asking for it by name. The reliability is unmatched — I have never had a no-show or a late pickup. The app makes it easy to manage bookings on the go, and the monthly invoicing saves our accounting team a lot of time. Absolutely recommend for any corporate travel programme.",
+            "avatar": "shopify://shop_images/customer_10.jpg",
+            "author_name": "Aymee Vasquez",
+            "date": "2019-05-12"
+          }
+        },
         "review_4": {
           "type": "review",
           "settings": {
@@ -147,6 +157,7 @@
         "review_1",
         "review_2",
         "review_3",
+        "review_Rw8UJz",
         "review_4"
       ],
       "settings": {
