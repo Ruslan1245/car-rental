@@ -18,21 +18,21 @@
           "type": "column",
           "settings": {
             "heading": "Company",
-            "menu": ""
+            "menu": "footer-navigate"
           }
         },
         "column_mHPEnP": {
           "type": "column",
           "settings": {
             "heading": "For Business",
-            "menu": ""
+            "menu": "footer-company"
           }
         },
         "column_aiM6Xp": {
           "type": "column",
           "settings": {
             "heading": "Top cities",
-            "menu": ""
+            "menu": "footer-book"
           }
         },
         "column_6YeCVM": {
@@ -59,7 +59,7 @@
       ],
       "name": "Car Rental Footer",
       "settings": {
-        "background_color": "#D6E8F7",
+        "background_color": "#d6e8f7",
         "brand_name": "Car rental",
         "appstore_link": "",
         "googleplay_link": "",
