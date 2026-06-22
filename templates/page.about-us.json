@@ -1,0 +1,147 @@
+{
+  "sections": {
+    "about_hero": {
+      "type": "cr-page-hero",
+      "settings": {
+        "image": "shopify://shop_images/service_woman.jpg",
+        "eyebrow": "Who we are",
+        "heading": "About Us",
+        "subheading": "Premium chauffeur service built on trust, reliability, and a commitment to excellence.",
+        "button_label": "Book a ride",
+        "button_link": "shopify://pages/book-now"
+      }
+    },
+    "about_story": {
+      "type": "cr-text-image",
+      "settings": {
+        "heading": "A decade of premium transport",
+        "text": "<p>We started with one simple belief: that getting from A to B should feel effortless. Over the past ten years, we have grown into a global network of trusted chauffeurs serving executives, travellers, and families in over 60 cities worldwide.</p><p>Every ride we take is a promise — to be on time, professional, and discreet. Whether it is a quiet airport transfer or a full-day hire, we hold ourselves to the same five-star standard every single time.</p>",
+        "button_label": "Our fleet",
+        "button_link": "shopify://pages/fleet",
+        "image": "shopify://shop_images/service.jpg",
+        "image_position": "right",
+        "background_color": "#ffffff",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "about_mission": {
+      "type": "cr-text-image",
+      "settings": {
+        "heading": "Our mission",
+        "text": "<p>We believe luxury should never compromise reliability. Our mission is to deliver the kind of service that makes our clients' lives easier — removing the stress of travel logistics so they can focus on what matters.</p><p>From real-time flight tracking to 24/7 multilingual support, every detail of our service is designed with the passenger in mind. We do not cut corners. We do not compromise on quality. And we never stop improving.</p>",
+        "button_label": "Contact us",
+        "button_link": "shopify://pages/contact",
+        "image": "shopify://shop_images/srvice_partner.jpg",
+        "image_position": "left",
+        "background_color": "#f9f9f9",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "about_features": {
+      "type": "car-rental-features",
+      "blocks": {
+        "feat_1": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "globe",
+            "title": "60+ countries",
+            "description": "A trusted network of professional chauffeurs covering the world's major cities and airports."
+          }
+        },
+        "feat_2": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "clock",
+            "title": "10 years of service",
+            "description": "A decade of delivering premium transport for business and leisure travellers worldwide."
+          }
+        },
+        "feat_3": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "headphones",
+            "title": "24/7 support",
+            "description": "Our multilingual team is available around the clock — by phone, chat, or email."
+          }
+        },
+        "feat_4": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "airport",
+            "title": "Flight tracking",
+            "description": "We monitor every arrival in real time so your driver is always ready, whatever happens."
+          }
+        },
+        "feat_5": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "sync",
+            "title": "Free cancellation",
+            "description": "Change or cancel up to 1 hour before pickup with no penalties and no hassle."
+          }
+        },
+        "feat_6": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "cloud",
+            "title": "Carbon offset",
+            "description": "Every ride includes a carbon offset contribution. Electric vehicles available in select cities."
+          }
+        }
+      },
+      "block_order": ["feat_1","feat_2","feat_3","feat_4","feat_5","feat_6"],
+      "settings": {
+        "heading": "Why clients choose us",
+        "heading_color": "#7a9cbf",
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "about_reviews": {
+      "type": "car-rental-reviews",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "I have used many chauffeur services over the years but this is in a different league. The driver was early, the car was immaculate, and the experience from booking to drop-off was completely frictionless.",
+            "avatar": "shopify://shop_images/customer_5.jpg",
+            "author_name": "James Hartley",
+            "date": "2025-04-10"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "We switched our company travel programme to this service eight months ago. The team is responsive, the invoicing is clean, and our executives have not had a single complaint. Highly recommended for corporate use.",
+            "avatar": "shopify://shop_images/customer_4.jpg",
+            "author_name": "Claire Fontaine",
+            "date": "2025-02-18"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "Booked a transfer from Heathrow at 5 AM. The driver was there 20 minutes early with a name sign, offered to help with luggage, and we arrived with time to spare. Exactly what you want after a long-haul flight.",
+            "avatar": "shopify://shop_images/customer_2.jpg",
+            "author_name": "Marco Esposito",
+            "date": "2024-11-05"
+          }
+        }
+      },
+      "block_order": ["review_1","review_2","review_3"],
+      "settings": {
+        "heading": "What our clients say",
+        "background_color": "#f9f9f9",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": ["about_hero","about_story","about_mission","about_features","about_reviews"]
+}

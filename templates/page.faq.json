@@ -1,0 +1,87 @@
+{
+  "sections": {
+    "faq_hero": {
+      "type": "cr-page-hero",
+      "settings": {
+        "image": "shopify://shop_images/service.png",
+        "eyebrow": "Got questions?",
+        "heading": "Frequently Asked Questions",
+        "subheading": "Everything you need to know about our chauffeur service, bookings, and policies.",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "faq_main": {
+      "type": "cr-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "item",
+          "settings": {
+            "question": "How do I book a chauffeur?",
+            "answer": "You can book directly through our Book Now page or contact our team by phone or email. We confirm every booking within minutes and send full trip details to your inbox."
+          }
+        },
+        "faq_2": {
+          "type": "item",
+          "settings": {
+            "question": "How far in advance do I need to book?",
+            "answer": "We recommend booking at least 2 hours in advance. For corporate accounts and special events, earlier is always better to guarantee vehicle availability."
+          }
+        },
+        "faq_3": {
+          "type": "item",
+          "settings": {
+            "question": "What happens if my flight is delayed?",
+            "answer": "We track all incoming flights in real time. Your driver will be informed of any delays and will wait accordingly. You also receive 1 hour of complimentary wait time at no extra charge."
+          }
+        },
+        "faq_4": {
+          "type": "item",
+          "settings": {
+            "question": "Can I cancel or change my booking?",
+            "answer": "Yes — you can cancel or make changes free of charge up to 1 hour before your scheduled pickup. For same-day cancellations within 1 hour, a cancellation fee may apply."
+          }
+        },
+        "faq_5": {
+          "type": "item",
+          "settings": {
+            "question": "What vehicles are available?",
+            "answer": "Our fleet includes Business Class sedans, First Class sedans, Business Class MPVs, and luxury SUVs. All vehicles are less than 3 years old, immaculate, and fully insured."
+          }
+        },
+        "faq_6": {
+          "type": "item",
+          "settings": {
+            "question": "Do you offer corporate accounts?",
+            "answer": "Absolutely. We work with many businesses across finance, legal, and tech. Corporate accounts include monthly invoicing, a dedicated account manager, and priority support. Contact us to get started."
+          }
+        },
+        "faq_7": {
+          "type": "item",
+          "settings": {
+            "question": "Are your chauffeurs licensed and insured?",
+            "answer": "Yes. Every chauffeur on our platform is fully licensed, background-checked, and covered by professional liability insurance. We only work with drivers who meet our strict quality standards."
+          }
+        },
+        "faq_8": {
+          "type": "item",
+          "settings": {
+            "question": "What payment methods do you accept?",
+            "answer": "We accept all major credit and debit cards, bank transfers, and corporate invoicing. Payment is processed securely after your ride is confirmed."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6", "faq_7", "faq_8"
+      ],
+      "settings": {
+        "heading": "Your questions answered",
+        "image": "shopify://shop_images/service_man.jpg",
+        "background_color": "#ffffff",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": ["faq_hero", "faq_main"]
+}

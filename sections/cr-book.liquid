@@ -1,0 +1,287 @@
+<div class="cr-book" style="background: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;">
+  <div class="cr-book__inner">
+
+    <div class="cr-book__intro">
+      {% if section.settings.heading != blank %}
+        <h2 class="cr-book__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subheading != blank %}
+        <p class="cr-book__sub">{{ section.settings.subheading }}</p>
+      {% endif %}
+    </div>
+
+    <div class="cr-book__form-wrap">
+      {% form 'contact' %}
+        {% if form.posted_successfully? %}
+          <div class="cr-book__success">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <p>Your booking request has been received! We'll confirm your ride within 30 minutes.</p>
+          </div>
+        {% endif %}
+
+        {% if form.errors %}
+          <div class="cr-book__error">Please check the highlighted fields and try again.</div>
+        {% endif %}
+
+        <div class="cr-book__row">
+          <div class="cr-book__field">
+            <label class="cr-book__label" for="book-name">Full name <span>*</span></label>
+            <input class="cr-book__input{% if form.errors contains 'author' %} cr-book__input--error{% endif %}"
+              type="text" id="book-name" name="contact[name]"
+              value="{{ form.name }}" autocomplete="name" required>
+          </div>
+          <div class="cr-book__field">
+            <label class="cr-book__label" for="book-email">Email <span>*</span></label>
+            <input class="cr-book__input{% if form.errors contains 'email' %} cr-book__input--error{% endif %}"
+              type="email" id="book-email" name="contact[email]"
+              value="{{ form.email }}" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="cr-book__row">
+          <div class="cr-book__field">
+            <label class="cr-book__label" for="book-phone">Phone <span>*</span></label>
+            <input class="cr-book__input" type="tel" id="book-phone"
+              name="contact[phone]" autocomplete="tel" required>
+          </div>
+          <div class="cr-book__field">
+            <label class="cr-book__label" for="book-class">Vehicle class</label>
+            <select class="cr-book__input cr-book__select" id="book-class" name="contact[vehicle_class]">
+              <option value="">Any available</option>
+              <option>Business Class Sedan</option>
+              <option>First Class Sedan</option>
+              <option>Business Class MPV</option>
+              <option>Luxury SUV</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cr-book__row">
+          <div class="cr-book__field">
+            <label class="cr-book__label" for="book-pickup">Pickup location <span>*</span></label>
+            <input class="cr-book__input" type="text" id="book-pickup"
+              name="contact[pickup_location]" placeholder="Address or airport" required>
+          </div>
+          <div class="cr-book__field">
+            <label class="cr-book__label" for="book-destination">Destination <span>*</span></label>
+            <input class="cr-book__input" type="text" id="book-destination"
+              name="contact[destination]" placeholder="Address or airport" required>
+          </div>
+        </div>
+
+        <div class="cr-book__row">
+          <div class="cr-book__field">
+            <label class="cr-book__label" for="book-date">Date <span>*</span></label>
+            <input class="cr-book__input" type="date" id="book-date"
+              name="contact[date]" required>
+          </div>
+          <div class="cr-book__field">
+            <label class="cr-book__label" for="book-time">Time <span>*</span></label>
+            <input class="cr-book__input" type="time" id="book-time"
+              name="contact[time]" required>
+          </div>
+        </div>
+
+        <div class="cr-book__row">
+          <div class="cr-book__field">
+            <label class="cr-book__label" for="book-passengers">Passengers</label>
+            <select class="cr-book__input cr-book__select" id="book-passengers" name="contact[passengers]">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6+</option>
+            </select>
+          </div>
+          <div class="cr-book__field">
+            <label class="cr-book__label" for="book-luggage">Luggage pieces</label>
+            <select class="cr-book__input cr-book__select" id="book-luggage" name="contact[luggage]">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cr-book__field">
+          <label class="cr-book__label" for="book-notes">Special requests</label>
+          <textarea class="cr-book__input cr-book__textarea" id="book-notes"
+            name="contact[body]" rows="3" placeholder="Child seat, meet & greet, flight number…">{{ form.body }}</textarea>
+        </div>
+
+        <button type="submit" class="cr-book__submit">Request booking</button>
+
+        <p class="cr-book__note">We'll confirm your booking by email within 30 minutes. No payment required at this stage.</p>
+      {% endform %}
+    </div>
+
+  </div>
+</div>
+
+{% stylesheet %}
+.cr-book__inner {
+  max-width: 860px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 5vw, 60px);
+}
+
+.cr-book__intro {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.cr-book__heading {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 12px;
+}
+
+.cr-book__sub {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.cr-book__form-wrap {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.cr-book__success {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.cr-book__success p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: #166534;
+  font-weight: 500;
+}
+
+.cr-book__error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 0.875rem;
+  color: #991b1b;
+  margin-bottom: 24px;
+}
+
+.cr-book__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.cr-book__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.cr-book__label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.cr-book__label span { color: #0f63bd; }
+
+.cr-book__input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #111;
+  background: #fafafa;
+  font-family: inherit;
+  transition: border-color 0.15s, background 0.15s;
+  box-sizing: border-box;
+}
+
+.cr-book__input:focus {
+  outline: none;
+  border-color: #0f63bd;
+  background: #fff;
+}
+
+.cr-book__input--error { border-color: #f87171; }
+
+.cr-book__select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.cr-book__textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.cr-book__submit {
+  width: 100%;
+  padding: 14px;
+  background: #0f63bd;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 4px;
+  font-family: inherit;
+}
+
+.cr-book__submit:hover { background: #0a4f99; }
+
+.cr-book__note {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: #999;
+  margin: 12px 0 0;
+}
+
+@media (max-width: 600px) {
+  .cr-book__row { grid-template-columns: 1fr; }
+  .cr-book__form-wrap { padding: 24px 18px; }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Book Now Form",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Request a ride" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Fill in the details below and we'll confirm your booking within 30 minutes." },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#f9f9f9" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 120, "step": 4, "default": 72 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 120, "step": 4, "default": 72 }
+  ],
+  "presets": [{ "name": "Book Now Form" }]
+}
+{% endschema %}

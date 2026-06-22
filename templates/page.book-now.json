@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "book_hero": {
+      "type": "cr-page-hero",
+      "settings": {
+        "image": "shopify://shop_images/service.jpg",
+        "eyebrow": "Ready to ride?",
+        "heading": "Book Your Ride",
+        "subheading": "Fill in your details below and we'll confirm your booking within 30 minutes.",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "book_form": {
+      "type": "cr-book",
+      "settings": {
+        "heading": "Request a ride",
+        "subheading": "Fill in the details below and we'll confirm your booking within 30 minutes.",
+        "background_color": "#f9f9f9",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": ["book_hero", "book_form"]
+}
