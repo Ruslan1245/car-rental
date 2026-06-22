@@ -17,6 +17,7 @@
         "placeholder_from": "Address, airport, hotel, …",
         "placeholder_to": "Address, airport, hotel, …",
         "button_label": "Search",
+        "form_action": "",
         "background_color": "#ffffff"
       }
     },
@@ -69,6 +70,7 @@
           "settings": {
             "rating": 5,
             "review_text": "Used the airport transfer after a 10-hour flight and it was exactly what I needed. Driver was at arrivals with my name, helped with luggage, and got me to the hotel without any fuss. Will use every time I travel for business.",
+            "avatar": "shopify://shop_images/customer_4.jpg",
             "author_name": "James Thornton",
             "date": "2024-02-14"
           }
@@ -78,6 +80,7 @@
           "settings": {
             "rating": 5,
             "review_text": "My flight was delayed by over an hour but the driver was still there waiting when I came out. No extra charge, no complaints — just a warm greeting and a comfortable ride. That kind of reliability is hard to find.",
+            "avatar": "shopify://shop_images/customer_1.jpg",
             "author_name": "Elena Marchetti",
             "date": "2023-11-03"
           }
@@ -87,6 +90,7 @@
           "settings": {
             "rating": 4,
             "review_text": "Booked a transfer from our hotel to the airport at 4am. The driver was on time, the car was clean and warm, and I made my flight with time to spare. Great service for early departures when public transport isn't an option.",
+            "avatar": "shopify://shop_images/customer_6.jpg",
             "author_name": "David Okafor",
             "date": "2024-01-20"
           }
