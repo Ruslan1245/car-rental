@@ -1,102 +1,14 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "services_hero": {
-      "type": "hero",
-      "blocks": {
-        "text_1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Corporate transportation services</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "h1",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "text_color": "#ffffff",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_2": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Five-star chauffeurs worldwide for corporations, agencies, and partners.</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "body",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "text_color": "#ffffff",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_1",
-        "text_2"
-      ],
+      "type": "cr-page-hero",
       "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/service.png",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "full-screen",
-        "section_height_custom": 50,
-        "background_color": "",
-        "toggle_overlay": true,
-        "overlay_color": "#0000002e",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "image": "shopify://shop_images/service.png",
+        "eyebrow": "Premium chauffeur service",
+        "heading": "Our Services",
+        "subheading": "Five-star chauffeurs worldwide for corporations, agencies, and partners.",
+        "button_label": "Book a ride",
+        "button_link": "shopify://pages/transfer"
       }
     },
     "services_reviews": {
@@ -125,26 +37,6 @@
         "review_3": {
           "type": "review",
           "settings": {
-            "rating": 4,
-            "review_text": "I have been using this service for over a year now and more of my clients keep asking for it by name. The reliability is unmatched — I have never had a no-show or a late pickup. The app makes it easy to manage bookings on the go, and the monthly invoicing saves our accounting team a lot of time. Absolutely recommend for any corporate travel programme.",
-            "avatar": "shopify://shop_images/customer_1.jpg",
-            "author_name": "Aymee Vasquez",
-            "date": "2019-05-12"
-          }
-        },
-        "review_Rw8UJz": {
-          "type": "review",
-          "settings": {
-            "rating": 4,
-            "review_text": "I have been using this service for over a year now and more of my clients keep asking for it by name. The reliability is unmatched — I have never had a no-show or a late pickup. The app makes it easy to manage bookings on the go, and the monthly invoicing saves our accounting team a lot of time. Absolutely recommend for any corporate travel programme.",
-            "avatar": "shopify://shop_images/customer_10.jpg",
-            "author_name": "Aymee Vasquez",
-            "date": "2019-05-12"
-          }
-        },
-        "review_4": {
-          "type": "review",
-          "settings": {
             "rating": 5,
             "review_text": "We switched our entire travel programme to this service six months ago and have not looked back. The chauffeurs are well-presented, punctual, and genuinely helpful with luggage. What sets them apart is the 24/7 support — any time we have had a last-minute change, the team resolved it within minutes. A premium experience at a very competitive rate.",
             "avatar": "shopify://shop_images/customer_2.jpg",
@@ -156,12 +48,51 @@
       "block_order": [
         "review_1",
         "review_2",
-        "review_3",
-        "review_Rw8UJz",
-        "review_4"
+        "review_3"
       ],
       "settings": {
-        "heading": "",
+        "heading": "What our clients say",
+        "background_color": "#f9f9f9",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "services_tailored": {
+      "type": "cr-tailored",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/service.jpg",
+            "title": "Corporate travel",
+            "description": "Arrange business journeys for your employees, clients, or yourself with ease."
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/service_airport_5a1799a8-5acc-44dd-a824-45b736e4a58b.jpg",
+            "title": "Travel agencies",
+            "description": "Earn more with a top-tier travel provider, integrated in your GDS."
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/service_meet.jpg",
+            "title": "Strategic partnerships",
+            "description": "Gift your valuable customers our services via a bespoke business solution."
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3"
+      ],
+      "settings": {
+        "heading": "Tailored to you",
+        "heading_color": "#7a9cbf",
         "background_color": "#ffffff",
         "padding_top": 60,
         "padding_bottom": 60
@@ -230,48 +161,7 @@
       "settings": {
         "heading": "How you arrive matters.",
         "heading_color": "#7a9cbf",
-        "background_color": "#f5f0ea",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "services_tailored": {
-      "type": "cr-tailored",
-      "blocks": {
-        "item_1": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/service.jpg",
-            "title": "Corporate travel",
-            "description": "Arrange business journeys for your employees, clients, or yourself with ease."
-          }
-        },
-        "item_2": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/service_airport_5a1799a8-5acc-44dd-a824-45b736e4a58b.jpg",
-            "title": "Travel agencies",
-            "description": "Earn more with a top-tier travel provider, integrated in your GDS."
-          }
-        },
-        "item_3": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/service_meet.jpg",
-            "title": "Strategic partnerships",
-            "description": "Gift your valuable customers our services via a bespoke business solution."
-          }
-        }
-      },
-      "block_order": [
-        "item_1",
-        "item_2",
-        "item_3"
-      ],
-      "settings": {
-        "heading": "Tailored to you",
-        "heading_color": "#7a9cbf",
-        "background_color": "#f5f0ea",
+        "background_color": "#f9f9f9",
         "padding_top": 60,
         "padding_bottom": 60
       }
@@ -280,7 +170,7 @@
       "type": "cr-text-image",
       "settings": {
         "heading": "Airport transfer in global cities",
-        "text": "<p>If you've just stepped off a plane, tired and aching from a long flight, there can be no better stress-reliever than a chauffeur airport transfer direct to your destination. Our transfers are available in hundreds of cities and airports across the world.</p><p>Every ride is booked in advance, so your driver is already waiting when you land — no queues, no haggling, no uncertainty. </p><p>From New York and London to Dubai and Tokyo, our global network ensures the same premium standard wherever your business takes you.</p>",
+        "text": "<p>If you've just stepped off a plane, tired and aching from a long flight, there can be no better stress-reliever than a chauffeur airport transfer direct to your destination. Our transfers are available in hundreds of cities and airports across the world.</p><p>Every ride is booked in advance, so your driver is already waiting when you land — no queues, no haggling, no uncertainty.</p><p>From New York and London to Dubai and Tokyo, our global network ensures the same premium standard wherever your business takes you.</p>",
         "button_label": "",
         "button_link": "",
         "image": "shopify://shop_images/service_woman.jpg",
@@ -299,8 +189,8 @@
         "button_link": "",
         "image": "shopify://shop_images/srvice_partner.jpg",
         "image_position": "left",
-        "background_color": "#ffffff",
-        "padding_top": 0,
+        "background_color": "#f9f9f9",
+        "padding_top": 60,
         "padding_bottom": 60
       }
     },
@@ -345,11 +235,11 @@
   },
   "order": [
     "services_hero",
-    "services_reviews",
-    "services_features",
     "services_tailored",
     "services_text_image_1",
     "services_text_image_2",
+    "services_features",
+    "services_reviews",
     "services_faq"
   ]
 }
