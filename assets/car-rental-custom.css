@@ -2,14 +2,28 @@
    Car Rental – custom overrides
    ============================================= */
 
-/* Homepage transparent header: white nav text */
+/* Homepage transparent header: white nav text + smooth colour transition */
 body.template-index header-component[data-sticky-state="inactive"] .menu-list__link-title {
   color: #ffffff !important;
+  transition: color 0.18s ease !important;
 }
 
-/* White chevron for transparent header */
+/* Hover / focus / active(dropdown open) → light blue */
+body.template-index header-component[data-sticky-state="inactive"] .menu-list__link:hover .menu-list__link-title,
+body.template-index header-component[data-sticky-state="inactive"] .menu-list__link:focus-visible .menu-list__link-title,
+body.template-index header-component[data-sticky-state="inactive"] .menu-list__link[aria-expanded="true"] .menu-list__link-title {
+  color: #a8d3f0 !important;
+}
+
+/* White chevron at rest; light-blue on hover / active */
 body.template-index header-component[data-sticky-state="inactive"] .menu-list__link[aria-haspopup="true"] .menu-list__link-title::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  transition: background-image 0s, opacity 0.18s ease !important;
+}
+
+body.template-index header-component[data-sticky-state="inactive"] .menu-list__link:hover .menu-list__link-title::after,
+body.template-index header-component[data-sticky-state="inactive"] .menu-list__link[aria-expanded="true"] .menu-list__link-title::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23a8d3f0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
 /* More spacing between top-level nav items */
@@ -44,7 +58,7 @@ body.template-index header-component[data-sticky-state="inactive"] .menu-list__l
 
 /* Dropdown outer: transparent — Horizon controls full-width positioning */
 .menu-list__submenu {
-  --submenu-animation-speed: 0.45s !important;
+  --submenu-animation-speed: 0.2s !important;
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
