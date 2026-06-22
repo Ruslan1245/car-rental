@@ -17,22 +17,17 @@ body.template-index header-component[data-sticky-state="inactive"] .menu-list__l
   padding-inline: 18px !important;
 }
 
-/* Nav hover: rounded blue border (transparent by default to prevent layout shift) */
+/* Nav links: permanent rounded border */
 .menu-list__link {
-  border: 1.5px solid transparent !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
   border-radius: 20px !important;
-  transition: border-color 0.2s ease !important;
+  transition: border-color 0.3s ease !important;
 }
 
-/* Homepage transparent header: light blue border on dark hero bg */
-body.template-index header-component[data-sticky-state="inactive"] .menu-list__link:hover {
-  border-color: rgba(214, 232, 247, 0.65) !important;
-}
-
-/* All other states (scrolled / non-homepage): darker blue border */
-body.template-index header-component[data-sticky-state="active"] .menu-list__link:hover,
-body:not(.template-index) header-component .menu-list__link:hover {
-  border-color: rgba(15, 99, 189, 0.3) !important;
+/* On scroll (sticky) + non-homepage: blue border */
+body.template-index header-component[data-sticky-state="active"] .menu-list__link,
+body:not(.template-index) header-component .menu-list__link {
+  border-color: rgba(15, 99, 189, 0.35) !important;
 }
 
 /* Navigation: chevron arrow on items that have a dropdown */
@@ -54,53 +49,23 @@ body:not(.template-index) header-component .menu-list__link:hover {
   transform: rotate(180deg);
 }
 
-/* Navigation dropdown: override grid with flex to properly center items */
-.mega-menu__grid {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-.mega-menu__list {
-  display: flex !important;
-  justify-content: center !important;
-  grid-column: unset !important;
-  width: auto !important;
-}
-
-/* Both links live inside one <li> — display side by side */
-.mega-menu__column {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  grid-column: unset !important;
-}
-
-.mega-menu__link {
-  font-size: 1.125rem !important;
-  font-weight: 700 !important;
-  justify-content: center !important;
-  text-align: center !important;
-  padding-inline: 40px !important;
-  white-space: nowrap !important;
-}
-
-/* Navigation dropdown: light blue background + slower transition */
+/* Navigation dropdown: dark Blacklane style */
 .menu-list__submenu {
-  --submenu-animation-speed: 0.6s !important;
-  background-color: #D6E8F7 !important;
-  transition: clip-path 0.6s var(--ease-out-cubic, ease),
-              visibility 0s linear 0.45s !important;
+  --submenu-animation-speed: 0.5s !important;
+  background-color: rgba(22, 22, 22, 0.97) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  transition: clip-path 0.5s var(--ease-out-cubic, ease),
+              visibility 0s linear 0.35s !important;
 }
 
-/* When open or hovered — no delay on visibility */
 .menu-list__list-item:has([aria-expanded="true"]) > .menu-list__submenu,
 .menu-list__submenu:hover {
-  transition: clip-path 0.6s var(--ease-out-cubic, ease),
+  transition: clip-path 0.5s var(--ease-out-cubic, ease),
               visibility 0s linear 0s !important;
 }
 
-/* Invisible bridge above dropdown so mouse doesn't lose hover in the gap */
+/* Invisible bridge so mouse doesn't lose hover in the gap */
 .menu-list__submenu::before {
   content: '';
   position: absolute;
@@ -111,8 +76,42 @@ body:not(.template-index) header-component .menu-list__link:hover {
 }
 
 .menu-list__submenu-inner {
-  transition-duration: 0.5s !important;
-  background-color: #D6E8F7 !important;
+  transition-duration: 0.4s !important;
+  background-color: transparent !important;
+  padding: 8px 0 !important;
+}
+
+/* Dropdown layout: vertical list */
+.mega-menu__grid {
+  display: block !important;
+}
+
+.mega-menu__list {
+  display: block !important;
+  grid-column: unset !important;
+  width: auto !important;
+}
+
+.mega-menu__column {
+  display: flex !important;
+  flex-direction: column !important;
+  grid-column: unset !important;
+}
+
+.mega-menu__link {
+  font-size: 0.9375rem !important;
+  font-weight: 400 !important;
+  color: #ffffff !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
+  padding: 10px 24px !important;
+  white-space: nowrap !important;
+  opacity: 1;
+  transition: opacity 0.15s ease !important;
+}
+
+.mega-menu__link:hover {
+  opacity: 0.65 !important;
 }
 
 /* Sitewide cards: subtle shadow, no hover lift */
