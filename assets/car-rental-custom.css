@@ -42,11 +42,30 @@
   text-align: center !important;
 }
 
-/* Navigation dropdown: slower open/close transition */
+/* Navigation dropdown: slower open/close transition + close delay */
 .menu-list__submenu {
-  --submenu-animation-speed: 0.45s !important;
+  --submenu-animation-speed: 0.4s !important;
+  transition: clip-path 0.4s var(--ease-out-cubic, ease),
+              visibility 0s linear 0.25s !important;
+}
+
+/* When open or hovered — no delay on visibility */
+.menu-list__list-item:has([aria-expanded="true"]) > .menu-list__submenu,
+.menu-list__submenu:hover {
+  transition: clip-path 0.4s var(--ease-out-cubic, ease),
+              visibility 0s linear 0s !important;
+}
+
+/* Invisible bridge above dropdown so mouse doesn't lose hover in the gap */
+.menu-list__submenu::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
 }
 
 .menu-list__submenu-inner {
-  transition-duration: 0.35s !important;
+  transition-duration: 0.3s !important;
 }
