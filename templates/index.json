@@ -158,6 +158,8 @@
         "feature_6"
       ],
       "settings": {
+        "heading": "",
+        "heading_color": "#7a9cbf",
         "background_color": "#ffffff",
         "padding_top": 60,
         "padding_bottom": 60
@@ -171,6 +173,7 @@
           "settings": {
             "rating": 5,
             "review_text": "This is a must-have plugin if you own a small/medium business that replies on reviews to add a layer of trust to your website. I had an issue and their support is top notch!",
+            "avatar": "shopify://shop_images/customer_7.jpg",
             "author_name": "Diamond Buyers",
             "date": "2021-11-12"
           }
@@ -180,6 +183,7 @@
           "settings": {
             "rating": 4,
             "review_text": "I apps make that local review software around, their support is top notch also! Can't go wrong with them.",
+            "avatar": "shopify://shop_images/customer_6.jpg",
             "author_name": "Martin Fletcher",
             "date": "2020-05-12"
           }
@@ -189,6 +193,7 @@
           "settings": {
             "rating": 4,
             "review_text": "This air social media public reviews all in one solution plug in rocks. I have been using it for a year now and more clients keep asking for the reviews.",
+            "avatar": "shopify://shop_images/customer_1.jpg",
             "author_name": "Aymee Vasquez",
             "date": "2019-05-12"
           }
@@ -293,6 +298,8 @@
       ],
       "name": "Car Rental Features",
       "settings": {
+        "heading": "",
+        "heading_color": "#7a9cbf",
         "background_color": "#ffffff",
         "padding_top": 60,
         "padding_bottom": 60
