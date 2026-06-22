@@ -21,24 +21,18 @@
   transform: rotate(180deg);
 }
 
-/* Navigation dropdown items: row layout, centered, larger */
-.mega-menu__grid {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 0 !important;
-}
-
-.mega-menu__column {
-  text-align: center !important;
-}
-
+/* Navigation dropdown: items in a row, centered, larger text */
 .mega-menu__list {
+  justify-content: center !important;
+}
+
+/* Both links live inside one <li> — make that column display as a row */
+.mega-menu__column {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  gap: 0 !important;
+  justify-content: center !important;
+  width: 100% !important;
 }
 
 .mega-menu__link {
@@ -46,7 +40,8 @@
   font-weight: 700 !important;
   justify-content: center !important;
   text-align: center !important;
-  padding-inline: 32px !important;
+  padding-inline: 40px !important;
+  white-space: nowrap !important;
 }
 
 /* Navigation dropdown: light blue background + slower transition */
