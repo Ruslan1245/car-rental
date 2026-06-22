@@ -42,16 +42,16 @@ body.template-index header-component[data-sticky-state="inactive"] .menu-list__l
   transform: rotate(180deg);
 }
 
-/* Navigation dropdown */
+/* Navigation dropdown: 400px white panel, blue border */
 .menu-list__submenu {
+  --submenu-animation-speed: 0.45s !important;
   width: 400px !important;
-  left: 0 !important;
   right: auto !important;
   background-color: #ffffff !important;
   border: 1.5px solid #a8d3f0 !important;
   border-radius: 12px !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10) !important;
-  overflow: hidden !important;
+  /* no overflow:hidden — breaks Horizon clip-path reveal */
 }
 
 .menu-list__submenu-inner {
