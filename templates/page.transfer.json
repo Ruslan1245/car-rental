@@ -248,7 +248,7 @@
         "vehicle_6": {
           "type": "vehicle",
           "settings": {
-            "image_1": "shopify://shop_images/sprinter_26df931f-72e8-4443-bbd3-221aea9444fd.jpg",
+            "image_1": "shopify://shop_images/sprinter_6be46698-cfb0-44d8-8844-d93e71970f6e.jpg",
             "title": "Sprinter Van",
             "models": "Mercedes Sprinter, or similar",
             "feature_1": "Fits up to 12 people",
@@ -280,7 +280,7 @@
         "text": "<p>When you land after a long-haul flight, the last thing you want is to stand in a taxi queue. With our airport transfer service, a professional chauffeur is waiting at arrivals — holding a name board, ready to take your bags.</p><p>We monitor your flight in real time, so if your plane is early or late, your driver knows before you do. You also get 60 minutes of complimentary wait time included on every airport pickup, so there's no rush through customs.</p>",
         "button_label": "Book a transfer",
         "button_link": "",
-        "image": "shopify://shop_images/transfer_page_9a5a9f0d-2b2b-489a-ac6d-706ab2e30eef.jpg",
+        "image": "shopify://shop_images/transfer_page_2.jpg",
         "image_position": "right",
         "background_color": "#ffffff",
         "padding_top": 64,
@@ -294,7 +294,7 @@
         "text": "<p>A smooth departure starts at your door. Your chauffeur arrives at the agreed time, loads your luggage, and takes you via the fastest route — with enough buffer to check in without rushing.</p><p>We operate 24 hours a day, 365 days a year. Early-morning flights, late-night arrivals, last-minute bookings — whatever your schedule demands, we adapt to it</p>",
         "button_label": "",
         "button_link": "",
-        "image": "shopify://shop_images/transfer_page_2.jpg",
+        "image": "shopify://shop_images/car_service_2.jpg",
         "image_position": "left",
         "background_color": "#ffffff",
         "padding_top": 0,
@@ -341,6 +341,7 @@
       ],
       "settings": {
         "heading": "Frequently Asked Questions",
+        "image": "shopify://shop_images/car_transfer_3.jpg",
         "background_color": "#ffffff",
         "padding_top": 60,
         "padding_bottom": 60
