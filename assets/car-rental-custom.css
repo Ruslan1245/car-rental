@@ -17,6 +17,24 @@ body.template-index header-component[data-sticky-state="inactive"] .menu-list__l
   padding-inline: 18px !important;
 }
 
+/* Nav hover: rounded blue border (transparent by default to prevent layout shift) */
+.menu-list__link {
+  border: 1.5px solid transparent !important;
+  border-radius: 8px !important;
+  transition: border-color 0.2s ease !important;
+}
+
+/* Homepage transparent header: light blue border on dark hero bg */
+body.template-index header-component[data-sticky-state="inactive"] .menu-list__link:hover {
+  border-color: rgba(214, 232, 247, 0.65) !important;
+}
+
+/* All other states (scrolled / non-homepage): darker blue border */
+body.template-index header-component[data-sticky-state="active"] .menu-list__link:hover,
+body:not(.template-index) header-component .menu-list__link:hover {
+  border-color: rgba(15, 99, 189, 0.3) !important;
+}
+
 /* Navigation: chevron arrow on items that have a dropdown */
 .menu-list__link[aria-haspopup="true"] .menu-list__link-title::after {
   content: '';
