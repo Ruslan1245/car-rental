@@ -12,7 +12,7 @@
     "fleet_hero": {
       "type": "cr-page-hero",
       "settings": {
-        "image": "shopify://shop_images/fleet.jpg",
+        "image": "shopify://shop_images/fleet_1.jpg",
         "eyebrow": "Premium vehicles",
         "heading": "Our Fleet",
         "subheading": "From executive saloons to spacious vans — every vehicle is late-model, professionally maintained, and driven by a licensed chauffeur.",
