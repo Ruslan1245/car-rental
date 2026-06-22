@@ -1,0 +1,257 @@
+{
+  "sections": {
+    "transfer_hero": {
+      "type": "hero",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Airport & City Transfers</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h1",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#ffffff",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Professional chauffeur transfers to and from airports, train stations, and hotels worldwide.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "body",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#ffffff",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_1",
+        "text_2"
+      ],
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "full-screen",
+        "section_height_custom": 50,
+        "background_color": "",
+        "toggle_overlay": true,
+        "overlay_color": "#0000002E",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "transfer_features": {
+      "type": "car-rental-features",
+      "blocks": {
+        "feat_1": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "globe",
+            "title": "Airport transfers",
+            "description": "Meet-and-greet service at arrivals. Your driver tracks your flight and adjusts for any delays."
+          }
+        },
+        "feat_2": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "clock",
+            "title": "Train station pickups",
+            "description": "Seamless transfers from major rail hubs. No waiting, no stress — just step off the train and go."
+          }
+        },
+        "feat_3": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "car",
+            "title": "Hotel & city transfers",
+            "description": "Point-to-point rides between hotels, offices, venues, and any address in the city."
+          }
+        }
+      },
+      "block_order": [
+        "feat_1",
+        "feat_2",
+        "feat_3"
+      ],
+      "settings": {
+        "heading": "Every journey, covered.",
+        "heading_color": "#7a9cbf",
+        "background_color": "#f5f0ea",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "transfer_text_image_1": {
+      "type": "cr-text-image",
+      "settings": {
+        "heading": "Your driver is already waiting",
+        "text": "<p>When you land after a long-haul flight, the last thing you want is to stand in a taxi queue. With our airport transfer service, a professional chauffeur is waiting at arrivals — holding a name board, ready to take your bags.</p><p>We monitor your flight in real time, so if your plane is early or late, your driver knows before you do. You also get 60 minutes of complimentary wait time included on every airport pickup, so there's no rush through customs.</p>",
+        "button_label": "Book a transfer",
+        "button_link": "",
+        "image_position": "right",
+        "background_color": "#ffffff",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "transfer_text_image_2": {
+      "type": "cr-text-image",
+      "settings": {
+        "heading": "Departing? We've got that too.",
+        "text": "<p>A smooth departure starts at your door. Your chauffeur arrives at the agreed time, loads your luggage, and takes you via the fastest route — with enough buffer to check in without rushing.</p><p>We operate 24 hours a day, 365 days a year. Early-morning flights, late-night arrivals, last-minute bookings — whatever your schedule demands, we adapt to it.</p>",
+        "button_label": "",
+        "button_link": "",
+        "image_position": "left",
+        "background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 64
+      }
+    },
+    "transfer_reviews": {
+      "type": "car-rental-reviews",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "Used the airport transfer after a 10-hour flight and it was exactly what I needed. Driver was at arrivals with my name, helped with luggage, and got me to the hotel without any fuss. Will use every time I travel for business.",
+            "author_name": "James Thornton",
+            "date": "2024-02-14"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "My flight was delayed by over an hour but the driver was still there waiting when I came out. No extra charge, no complaints — just a warm greeting and a comfortable ride. That kind of reliability is hard to find.",
+            "author_name": "Elena Marchetti",
+            "date": "2023-11-03"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "rating": 4,
+            "review_text": "Booked a transfer from our hotel to the airport at 4am. The driver was on time, the car was clean and warm, and I made my flight with time to spare. Great service for early departures when public transport isn't an option.",
+            "author_name": "David Okafor",
+            "date": "2024-01-20"
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
+      "settings": {
+        "heading": "What travellers say",
+        "background_color": "#f9f9f9",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "transfer_faq": {
+      "type": "cr-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "item",
+          "settings": {
+            "question": "How far in advance should I book a transfer?",
+            "answer": "We recommend booking at least 24 hours in advance, though we also accept last-minute bookings subject to availability. For early-morning or peak-hour pickups, booking ahead ensures you get the vehicle class you prefer."
+          }
+        },
+        "faq_2": {
+          "type": "item",
+          "settings": {
+            "question": "What happens if my flight is delayed?",
+            "answer": "We track all incoming flights in real time. If your flight is delayed, your driver automatically adjusts their arrival time — you don't need to call or message us. Every airport pickup includes 60 minutes of complimentary wait time at no extra charge."
+          }
+        },
+        "faq_3": {
+          "type": "item",
+          "settings": {
+            "question": "Can I cancel or change my booking?",
+            "answer": "Yes. You can modify or cancel your transfer free of charge up to 1 hour before the scheduled pickup time. Cancellations made less than 1 hour before pickup may incur a fee."
+          }
+        },
+        "faq_4": {
+          "type": "item",
+          "settings": {
+            "question": "What types of vehicles are available?",
+            "answer": "We offer a range of premium vehicles including executive saloons, business class SUVs, and larger vehicles for groups or extra luggage. All vehicles are late-model, professionally maintained, and driven by licensed chauffeurs."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "transfer_hero",
+    "transfer_features",
+    "transfer_text_image_1",
+    "transfer_text_image_2",
+    "transfer_reviews",
+    "transfer_faq"
+  ]
+}
