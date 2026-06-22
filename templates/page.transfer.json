@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "transfer_hero": {
@@ -60,7 +69,6 @@
       ],
       "settings": {
         "media_type_1": "image",
-        "image_1": "",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
@@ -81,7 +89,7 @@
         "section_height_custom": 50,
         "background_color": "",
         "toggle_overlay": true,
-        "overlay_color": "#0000002E",
+        "overlay_color": "#0000002e",
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "blurred_reflection": false,
@@ -127,6 +135,49 @@
         "heading": "",
         "heading_color": "#7a9cbf",
         "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "transfer_reviews": {
+      "type": "car-rental-reviews",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "Used the airport transfer after a 10-hour flight and it was exactly what I needed. Driver was at arrivals with my name, helped with luggage, and got me to the hotel without any fuss. Will use every time I travel for business.",
+            "author_name": "James Thornton",
+            "date": "2024-02-14"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "My flight was delayed by over an hour but the driver was still there waiting when I came out. No extra charge, no complaints — just a warm greeting and a comfortable ride. That kind of reliability is hard to find.",
+            "author_name": "Elena Marchetti",
+            "date": "2023-11-03"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "rating": 4,
+            "review_text": "Booked a transfer from our hotel to the airport at 4am. The driver was on time, the car was clean and warm, and I made my flight with time to spare. Great service for early departures when public transport isn't an option.",
+            "author_name": "David Okafor",
+            "date": "2024-01-20"
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
+      "settings": {
+        "heading": "What travellers say",
+        "background_color": "#f9f9f9",
         "padding_top": 60,
         "padding_bottom": 60
       }
@@ -194,56 +245,13 @@
       "type": "cr-text-image",
       "settings": {
         "heading": "Departing? We've got that too.",
-        "text": "<p>A smooth departure starts at your door. Your chauffeur arrives at the agreed time, loads your luggage, and takes you via the fastest route — with enough buffer to check in without rushing.</p><p>We operate 24 hours a day, 365 days a year. Early-morning flights, late-night arrivals, last-minute bookings — whatever your schedule demands, we adapt to it.</p>",
+        "text": "<p>A smooth departure starts at your door. Your chauffeur arrives at the agreed time, loads your luggage, and takes you via the fastest route — with enough buffer to check in without rushing.</p><p>We operate 24 hours a day, 365 days a year. Early-morning flights, late-night arrivals, last-minute bookings — whatever your schedule demands, we adapt to it</p>",
         "button_label": "",
         "button_link": "",
         "image_position": "left",
         "background_color": "#ffffff",
         "padding_top": 0,
         "padding_bottom": 64
-      }
-    },
-    "transfer_reviews": {
-      "type": "car-rental-reviews",
-      "blocks": {
-        "review_1": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "review_text": "Used the airport transfer after a 10-hour flight and it was exactly what I needed. Driver was at arrivals with my name, helped with luggage, and got me to the hotel without any fuss. Will use every time I travel for business.",
-            "author_name": "James Thornton",
-            "date": "2024-02-14"
-          }
-        },
-        "review_2": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "review_text": "My flight was delayed by over an hour but the driver was still there waiting when I came out. No extra charge, no complaints — just a warm greeting and a comfortable ride. That kind of reliability is hard to find.",
-            "author_name": "Elena Marchetti",
-            "date": "2023-11-03"
-          }
-        },
-        "review_3": {
-          "type": "review",
-          "settings": {
-            "rating": 4,
-            "review_text": "Booked a transfer from our hotel to the airport at 4am. The driver was on time, the car was clean and warm, and I made my flight with time to spare. Great service for early departures when public transport isn't an option.",
-            "author_name": "David Okafor",
-            "date": "2024-01-20"
-          }
-        }
-      },
-      "block_order": [
-        "review_1",
-        "review_2",
-        "review_3"
-      ],
-      "settings": {
-        "heading": "What travellers say",
-        "background_color": "#f9f9f9",
-        "padding_top": 60,
-        "padding_bottom": 60
       }
     },
     "transfer_faq": {
