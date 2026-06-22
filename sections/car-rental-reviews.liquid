@@ -18,9 +18,12 @@
                 {% endif %}
               {% endfor %}
             </div>
-            <p class="cr-reviews__text">
-              <span class="cr-reviews__quote">&ldquo;</span>{{ block.settings.review_text }}<span class="cr-reviews__quote">&rdquo;</span>
-            </p>
+            <div class="cr-reviews__text-wrap">
+              <p class="cr-reviews__text">
+                <span class="cr-reviews__quote">&ldquo;</span>{{ block.settings.review_text }}<span class="cr-reviews__quote">&rdquo;</span>
+              </p>
+              <button class="cr-reviews__readmore" aria-expanded="false">read more</button>
+            </div>
             <div class="cr-reviews__author">
               <div class="cr-reviews__avatar">
                 {% if block.settings.avatar != blank %}
@@ -42,6 +45,37 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.querySelectorAll('.cr-reviews__card').forEach(function(card) {
+    var text = card.querySelector('.cr-reviews__text');
+    var btn = card.querySelector('.cr-reviews__readmore');
+    if (!text || !btn) return;
+
+    function checkOverflow() {
+      if (text.scrollHeight > text.clientHeight + 2) {
+        btn.style.display = 'inline';
+      } else {
+        btn.style.display = 'none';
+      }
+    }
+
+    btn.addEventListener('click', function() {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      if (expanded) {
+        text.classList.remove('cr-reviews__text--expanded');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.textContent = 'read more';
+      } else {
+        text.classList.add('cr-reviews__text--expanded');
+        btn.setAttribute('aria-expanded', 'true');
+        btn.textContent = 'show less';
+      }
+    });
+
+    checkOverflow();
+  });
+</script>
 
 {% stylesheet %}
 .cr-reviews__heading-wrap {
@@ -89,8 +123,10 @@
   background: #fff;
   min-width: 320px;
   max-width: 360px;
+  width: 340px;
   flex-shrink: 0;
   scroll-snap-align: start;
+  box-sizing: border-box;
 }
 
 .cr-reviews__stars {
@@ -107,13 +143,47 @@
   color: #f5a623;
 }
 
+.cr-reviews__text-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .cr-reviews__text {
   font-size: 0.875rem;
   font-style: italic;
   color: #444;
   line-height: 1.7;
   margin: 0;
-  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cr-reviews__text--expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  overflow: visible;
+}
+
+.cr-reviews__readmore {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.8rem;
+  color: #4a7cf5;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: underline;
+  display: none;
+}
+
+.cr-reviews__readmore:hover {
+  color: #0f63bd;
 }
 
 .cr-reviews__quote {
