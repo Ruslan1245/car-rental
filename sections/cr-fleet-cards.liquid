@@ -1,0 +1,387 @@
+<div class="cr-fleet" style="background: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;">
+  <div class="cr-fleet__inner">
+    {% if section.settings.heading != blank %}
+      <h2 class="cr-fleet__heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+    {% if section.settings.subheading != blank %}
+      <p class="cr-fleet__subheading">{{ section.settings.subheading }}</p>
+    {% endif %}
+    <div class="cr-fleet__grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'car' %}
+          <div class="cr-fleet__card" {{ block.shopify_attributes }}>
+            <div class="cr-fleet__photo-wrap">
+              {% if block.settings.image != blank %}
+                {{ block.settings.image | image_url: width: 800 | image_tag: width: 800, loading: 'lazy', class: 'cr-fleet__photo' }}
+              {% else %}
+                <div class="cr-fleet__photo-placeholder"></div>
+              {% endif %}
+              {% if block.settings.class_label != blank %}
+                <span class="cr-fleet__badge">{{ block.settings.class_label }}</span>
+              {% endif %}
+            </div>
+            <div class="cr-fleet__body">
+              <div class="cr-fleet__meta">
+                {% if block.settings.year != blank %}
+                  <span class="cr-fleet__year">{{ block.settings.year }}</span>
+                {% endif %}
+              </div>
+              <h3 class="cr-fleet__name">{{ block.settings.make }} {{ block.settings.model }}</h3>
+              <div class="cr-fleet__specs">
+                {% if block.settings.seats != blank %}
+                  <div class="cr-fleet__spec">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    {{ block.settings.seats }}
+                  </div>
+                {% endif %}
+                {% if block.settings.luggage != blank %}
+                  <div class="cr-fleet__spec">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+                    {{ block.settings.luggage }}
+                  </div>
+                {% endif %}
+                {% if block.settings.transmission != blank %}
+                  <div class="cr-fleet__spec">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                    {{ block.settings.transmission }}
+                  </div>
+                {% endif %}
+              </div>
+              {% if block.settings.feature_1 != blank or block.settings.feature_2 != blank or block.settings.feature_3 != blank %}
+                <ul class="cr-fleet__features">
+                  {% if block.settings.feature_1 != blank %}
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                      {{ block.settings.feature_1 }}
+                    </li>
+                  {% endif %}
+                  {% if block.settings.feature_2 != blank %}
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                      {{ block.settings.feature_2 }}
+                    </li>
+                  {% endif %}
+                  {% if block.settings.feature_3 != blank %}
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4a7cf5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                      {{ block.settings.feature_3 }}
+                    </li>
+                  {% endif %}
+                </ul>
+              {% endif %}
+              {% assign book_url = section.settings.book_url | default: '/pages/book-now' %}
+              <a class="cr-fleet__btn" href="{{ book_url }}">Book this car</a>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+.cr-fleet__inner {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 5vw, 80px);
+}
+
+.cr-fleet__heading {
+  font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #111;
+}
+
+.cr-fleet__subheading {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 40px;
+}
+
+.cr-fleet__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cr-fleet__card {
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.05);
+  transition: box-shadow 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.cr-fleet__card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.09), 0 8px 28px rgba(0,0,0,0.07);
+  transform: scale(1.015);
+}
+
+.cr-fleet__photo-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #f5f5f5;
+  aspect-ratio: 16 / 10;
+}
+
+.cr-fleet__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cr-fleet__photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e8f0f8 0%, #d0e4f0 100%);
+}
+
+.cr-fleet__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(74, 124, 245, 0.92);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.cr-fleet__body {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cr-fleet__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.cr-fleet__year {
+  font-size: 0.8125rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.cr-fleet__name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 12px;
+  line-height: 1.25;
+}
+
+.cr-fleet__specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cr-fleet__spec {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8125rem;
+  color: #555;
+}
+
+.cr-fleet__spec svg {
+  color: #888;
+  flex-shrink: 0;
+}
+
+.cr-fleet__features {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.cr-fleet__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  font-size: 0.8125rem;
+  color: #444;
+  line-height: 1.45;
+}
+
+.cr-fleet__features li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cr-fleet__btn {
+  display: block;
+  text-align: center;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 11px 20px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  margin-top: auto;
+}
+
+.cr-fleet__btn:hover {
+  background: #333;
+}
+
+@media (max-width: 900px) {
+  .cr-fleet__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .cr-fleet__grid {
+    grid-template-columns: 1fr;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Fleet Cards",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Fleet"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "url",
+      "id": "book_url",
+      "label": "Book Now link"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72
+    }
+  ],
+  "blocks": [
+    {
+      "type": "car",
+      "name": "Car",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Photo"
+        },
+        {
+          "type": "text",
+          "id": "year",
+          "label": "Year",
+          "default": "2024"
+        },
+        {
+          "type": "text",
+          "id": "make",
+          "label": "Make",
+          "default": "Mercedes-Benz"
+        },
+        {
+          "type": "text",
+          "id": "model",
+          "label": "Model",
+          "default": "S-Class"
+        },
+        {
+          "type": "text",
+          "id": "class_label",
+          "label": "Class badge (e.g. First Class)"
+        },
+        {
+          "type": "text",
+          "id": "seats",
+          "label": "Seats",
+          "default": "Up to 3 passengers"
+        },
+        {
+          "type": "text",
+          "id": "luggage",
+          "label": "Luggage",
+          "default": "2 large bags"
+        },
+        {
+          "type": "text",
+          "id": "transmission",
+          "label": "Transmission",
+          "default": "Automatic"
+        },
+        {
+          "type": "text",
+          "id": "feature_1",
+          "label": "Feature 1",
+          "default": "Leather interior"
+        },
+        {
+          "type": "text",
+          "id": "feature_2",
+          "label": "Feature 2",
+          "default": "Wi-Fi on board"
+        },
+        {
+          "type": "text",
+          "id": "feature_3",
+          "label": "Feature 3"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fleet Cards"
+    }
+  ]
+}
+{% endschema %}

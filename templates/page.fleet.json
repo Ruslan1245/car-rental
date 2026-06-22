@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "fleet_hero": {
@@ -20,92 +11,144 @@
         "button_link": "shopify://pages/book-now"
       }
     },
-    "fleet_vehicles": {
-      "type": "cr-vehicle-cards",
+    "fleet_cars": {
+      "type": "cr-fleet-cards",
       "blocks": {
-        "vehicle_1": {
-          "type": "vehicle",
+        "car_1": {
+          "type": "car",
           "settings": {
-            "image_1": "shopify://shop_images/car_bently.jpg",
-            "image_2": "shopify://shop_images/car_merc.jpg",
-            "title": "Business Class",
-            "models": "Mercedes E-Class, BMW 5 Series, Audi A6, Cadillac XTS, or similar",
-            "feature_1": "Fits up to 3 people",
-            "feature_2": "Fits 2 carry-on bags, or 2 standard check-in, or 1 extra large check-in bag",
-            "feature_3": "Available in most of our business districts"
+            "year": "2024",
+            "make": "Mercedes-Benz",
+            "model": "E-Class",
+            "class_label": "Business Class",
+            "seats": "Up to 3 passengers",
+            "luggage": "2 large bags",
+            "transmission": "Automatic",
+            "feature_1": "Leather interior",
+            "feature_2": "Climate control",
+            "feature_3": "Wi-Fi on board"
           }
         },
-        "vehicle_2": {
-          "type": "vehicle",
+        "car_2": {
+          "type": "car",
           "settings": {
-            "image_1": "shopify://shop_images/car_merc_2.jpg",
-            "image_2": "shopify://shop_images/car_sport.jpg",
-            "title": "First Class",
-            "models": "Mercedes S-Class, BMW 7 Series, Audi A8, or similar",
-            "feature_1": "Fits up to 3 people",
-            "feature_2": "Fits 2 carry-on bags, or 2 standard check-in, or 1 extra large check-in bag",
-            "feature_3": "Available in most of our business districts"
+            "year": "2024",
+            "make": "BMW",
+            "model": "5 Series",
+            "class_label": "Business Class",
+            "seats": "Up to 3 passengers",
+            "luggage": "2 large bags",
+            "transmission": "Automatic",
+            "feature_1": "Panoramic sunroof",
+            "feature_2": "Ambient lighting",
+            "feature_3": "Wi-Fi on board"
           }
         },
-        "vehicle_3": {
-          "type": "vehicle",
+        "car_3": {
+          "type": "car",
           "settings": {
-            "image_1": "shopify://shop_images/car_1classXL.jpg",
-            "image_2": "shopify://shop_images/car_escalade.jpg",
-            "title": "Business Van / SUV",
-            "models": "Mercedes V-Class, Chevy Suburban, Cadillac Escalade, GMC Yukon Denali, or similar",
-            "feature_1": "Fits up to 5 people",
-            "feature_2": "Fits 12 carry-on bags or 8 standard check-in or 6 extra large check-in bags",
-            "feature_3": "Best for larger parties, lots of luggage, or families"
+            "year": "2024",
+            "make": "Mercedes-Benz",
+            "model": "S-Class",
+            "class_label": "First Class",
+            "seats": "Up to 3 passengers",
+            "luggage": "2 large bags",
+            "transmission": "Automatic",
+            "feature_1": "Massage seats",
+            "feature_2": "Burmester sound system",
+            "feature_3": "Wi-Fi on board"
           }
         },
-        "vehicle_4": {
-          "type": "vehicle",
+        "car_4": {
+          "type": "car",
           "settings": {
-            "image_1": "shopify://shop_images/car_tesla_627014fa-4afd-4fb9-9523-1cf46168266d.jpg",
-            "image_2": "shopify://shop_images/car_tesla_2.jpg",
-            "title": "Electric Class",
-            "models": "Tesla Model S, Mercedes EQS, BMW iX, or similar",
-            "feature_1": "Fits up to 3 people",
-            "feature_2": "Zero-emission ride with premium comfort",
-            "feature_3": "Available in selected cities"
+            "year": "2024",
+            "make": "BMW",
+            "model": "7 Series",
+            "class_label": "First Class",
+            "seats": "Up to 3 passengers",
+            "luggage": "2 large bags",
+            "transmission": "Automatic",
+            "feature_1": "Executive rear lounge",
+            "feature_2": "Bowers & Wilkins audio",
+            "feature_3": "Wi-Fi on board"
           }
         },
-        "vehicle_5": {
-          "type": "vehicle",
+        "car_5": {
+          "type": "car",
           "settings": {
-            "image_1": "shopify://shop_images/car_bmw_ff46edf6-689c-4231-aa97-2141ec9a0deb.jpg",
-            "image_2": "shopify://shop_images/car_merc.jpg",
-            "title": "First Class XL",
-            "models": "Mercedes GLS, BMW X7, Audi Q7, or similar",
-            "feature_1": "Fits up to 4 people",
-            "feature_2": "Fits 4 carry-on bags or 4 standard check-in bags",
-            "feature_3": "Ideal for families and executive travel"
+            "year": "2024",
+            "make": "Mercedes-Benz",
+            "model": "V-Class",
+            "class_label": "Business Van",
+            "seats": "Up to 7 passengers",
+            "luggage": "6 large bags",
+            "transmission": "Automatic",
+            "feature_1": "Facing seats configuration",
+            "feature_2": "Conference table available",
+            "feature_3": "Wi-Fi on board"
           }
         },
-        "vehicle_6": {
-          "type": "vehicle",
+        "car_6": {
+          "type": "car",
           "settings": {
-            "image_1": "shopify://shop_images/sprinter_6be46698-cfb0-44d8-8844-d93e71970f6e.jpg",
-            "title": "Sprinter Van",
-            "models": "Mercedes Sprinter, or similar",
-            "feature_1": "Fits up to 12 people",
-            "feature_2": "Large luggage capacity for groups",
-            "feature_3": "Perfect for group transfers and events"
+            "year": "2024",
+            "make": "Tesla",
+            "model": "Model S",
+            "class_label": "Electric Class",
+            "seats": "Up to 4 passengers",
+            "luggage": "3 large bags",
+            "transmission": "Automatic",
+            "feature_1": "Zero emissions",
+            "feature_2": "Autopilot assisted",
+            "feature_3": "Wi-Fi on board"
+          }
+        },
+        "car_7": {
+          "type": "car",
+          "settings": {
+            "year": "2024",
+            "make": "Cadillac",
+            "model": "Escalade",
+            "class_label": "First Class XL",
+            "seats": "Up to 6 passengers",
+            "luggage": "5 large bags",
+            "transmission": "Automatic",
+            "feature_1": "Third-row seating",
+            "feature_2": "AKG premium audio",
+            "feature_3": "Wi-Fi on board"
+          }
+        },
+        "car_8": {
+          "type": "car",
+          "settings": {
+            "year": "2024",
+            "make": "Mercedes-Benz",
+            "model": "Sprinter",
+            "class_label": "Group Transfer",
+            "seats": "Up to 12 passengers",
+            "luggage": "12 large bags",
+            "transmission": "Automatic",
+            "feature_1": "Ideal for groups & events",
+            "feature_2": "Extra luggage space",
+            "feature_3": "Wi-Fi on board"
           }
         }
       },
       "block_order": [
-        "vehicle_1",
-        "vehicle_2",
-        "vehicle_3",
-        "vehicle_4",
-        "vehicle_5",
-        "vehicle_6"
+        "car_1",
+        "car_2",
+        "car_3",
+        "car_4",
+        "car_5",
+        "car_6",
+        "car_7",
+        "car_8"
       ],
       "settings": {
-        "heading": "Choose your vehicle class",
-        "fleet_url": "/pages/book-now",
+        "heading": "Choose your vehicle",
+        "subheading": "Every car is late-model, fully insured, and driven by a licensed chauffeur.",
+        "book_url": "/pages/book-now",
         "background_color": "#ffffff",
         "padding_top": 72,
         "padding_bottom": 72
@@ -155,7 +198,7 @@
   },
   "order": [
     "fleet_hero",
-    "fleet_vehicles",
+    "fleet_cars",
     "fleet_features"
   ]
 }
